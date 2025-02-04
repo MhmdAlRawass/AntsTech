@@ -95,7 +95,7 @@
     /* To disable all hovering  */
     /* *:hover {
         pointer-events: none;
-    } */
+    }  */
 
     /* Slider */
     .slider .container .side_bar {
@@ -103,7 +103,15 @@
     }
 
     .slider{
-        margin-top: 140px;
+        margin-top: 160px;
+    }
+
+    .banner {
+        margin: 0;
+    }
+
+    .last-banner {
+        margin-bottom: 20px;
     }
 
     /* on sale products slider */
@@ -153,7 +161,37 @@
     .banner_2{
         margin-top: 0;
     }
+
+    .last-banner{
+        margin-bottom: 15px;
+    }
 }
+
+
+/* Remove hover effects */
+@media (max-width: 768px) { 
+    .img_product:hover img:first-child {
+        opacity: 1;
+    }
+
+    .img_product:hover .img_hover {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    .product:hover .icons .fa-heart {
+        visibility: hidden; 
+    }
+
+    .product:hover .product_details {
+        max-height: 0;
+    }
+
+    .expand-button {
+        display: none !important; 
+    }
+}
+
 
 
 @media (max-width: 600px) {

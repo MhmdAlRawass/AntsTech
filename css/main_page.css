@@ -126,6 +126,7 @@
 }
 
 .banner .container .banner_img {
+    z-index: 9;
     width: 32%;
     position: relative;
 }

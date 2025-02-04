@@ -134,6 +134,35 @@
     }
 }
 
+/* Remove hover effects of product */
+@media (max-width: 768px) { 
+    .img_product:hover img:first-child {
+        opacity: 1;
+    }
+
+    .img_product:hover .img_hover {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .product:hover .icons .fa-heart {
+        visibility: hidden; 
+    }
+
+    .product:hover .product_details {
+        max-height: 0;
+    }
+
+    .expand-button {
+        display: none !important; 
+    }
+
+    .all_products .listed_products .product:hover {
+        transform: scale(1);
+        border: inherit;
+    }
+}
+
 @media (max-width: 680px) {
     .all_products .listed_products {
         grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
