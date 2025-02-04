@@ -92,6 +92,10 @@
 }
 
 @media (max-width: 992px) {
+    /* To disable all hovering  */
+    /* *:hover {
+        pointer-events: none;
+    } */
 
     /* Slider */
     .slider .container .side_bar {
@@ -176,10 +180,7 @@
         margin-right: 0.5rem;
     }
 
-    /* To disable all hovering  */
-    *:hover {
-        pointer-events: none;
-    }
+    
 
     /* Btn Swipers  */
     .slide .container .mySwiper .btn_Swip::after{
