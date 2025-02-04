@@ -102,6 +102,10 @@
         display: none;
     }
 
+    .slider{
+        margin-top: 140px;
+    }
+
     /* on sale products slider */
     .slide {
         margin-bottom: 1.6rem;
