@@ -225,3 +225,25 @@ input::-webkit-inner-spin-button{
     color: var(--dark-color);
 }
 
+
+
+
+/* products */
+
+.product .product_details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.product:hover .product_details {
+    max-height: 500px; /* Adjust as needed to ensure the entire details section is visible*/
+}
+
+
+
+.slide .container .mySwiper {
+    overflow: inherit !important;
+    overflow-x: clip !important;
+}
+
