@@ -368,7 +368,10 @@ input[type="range"]::-moz-range-thumb {
 /* END END PAGE PAGINATION */
 
 
-
+/* tooltip */
+i[data-tooltip] {
+    z-index: 999;
+}
 
 
 

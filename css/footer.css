@@ -89,7 +89,7 @@ footer{
 footer .container{
     display: flex;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 40px ;
     width: 100%;
 }
 
@@ -179,10 +179,11 @@ footer .container .row .links a:hover{
 
 footer .bottom_footer{
     background-color: #202935;
+
 }
 
 footer .bottom_footer .container{
-    padding: 10px 0;
+    padding: 10px ;
     align-items: center;
 }
 
@@ -208,6 +209,7 @@ footer .bottom_footer .payment_img img:hover{
 
 /* End of footer */
 
+/* Responsive */
 @media (max-width: 824px){
     footer .container {
         display: flex;

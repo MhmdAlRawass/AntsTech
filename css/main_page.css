@@ -211,6 +211,12 @@
     position: relative;
     z-index: 10;
 }
+/* For on sale working on z-index!!! */
+.slide_sale .container{
+    position: relative;
+    z-index: 100;
+}
+/* ------------ */
 .slide .container .mySwiper{
     overflow: hidden;
     padding: 10px;
@@ -427,6 +433,7 @@
 
 .product:hover .product_details {
     max-height: 500px; /* Adjust as needed to ensure the entire details section is visible */
+
 }
 
 
@@ -622,9 +629,9 @@
 
 .products .swiper-slide,
 .listed_products .swiper-slide{
-    width: 20%;
     height: 300px !important;
     position: relative;
+    width: 20%;
 }
 
 .slide .container .mySwiper {

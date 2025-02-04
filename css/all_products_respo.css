@@ -33,6 +33,16 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
+    .all_products .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .all_products .listed_products {
+        width: 100%;
+        
+    }
+
     .top_page_title {
         /* padding: 180px; */
         padding-bottom: 140px;
@@ -108,10 +118,7 @@
 }
 
 @media (max-width: 814px) {
-    .all_products .container{
-        display: flex;
-        flex-direction: column;
-    }
+    
     /* .all_products .listed_products {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     } */

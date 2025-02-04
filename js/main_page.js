@@ -174,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     icon.addEventListener('mouseleave', hideTooltip);
   });
 });
-
 function showTooltip(event) {
   const tooltipText = event.target.getAttribute('data-tooltip');
   if (!tooltipText) return;
@@ -184,6 +183,10 @@ function showTooltip(event) {
   tooltip.innerText = tooltipText;
   document.body.appendChild(tooltip);
 
+  // increase z-index
+  tooltip.style.position = 'absolute';
+  tooltip.style.zIndex = '99999'; 
+
   const { left, top, width } = event.target.getBoundingClientRect();
   tooltip.style.left = `${left + window.scrollX + width / 2 - tooltip.offsetWidth / 2}px`;
   tooltip.style.top = `${top + window.scrollY - tooltip.offsetHeight - 5}px`;
@@ -191,6 +194,7 @@ function showTooltip(event) {
   requestAnimationFrame(() => tooltip.classList.add('show'));
   event.target._tooltipElement = tooltip;
 }
+
 
 function hideTooltip(event) {
   const tooltip = event.target._tooltipElement;
