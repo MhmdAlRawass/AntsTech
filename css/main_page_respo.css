@@ -126,12 +126,14 @@
     /* Slider products  */
     .slide_1 .categ_img{
         display: none;
+        visibility: hidden;
     }
 
-    .slide_2 a img{
+    .slide_2 .categ_img{
         display: none;
-    }
+        visibility: hidden;
 
+    }
     .slide_1 .mySwiper,
     .slide_2 .mySwiper{
         width: 100%;
