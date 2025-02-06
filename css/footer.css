@@ -223,7 +223,7 @@ footer .bottom_footer .payment_img img:hover{
     footer .container .big_row{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -258,7 +258,7 @@ footer .bottom_footer .payment_img img:hover{
 @media (max-width: 580px){
     footer .container .big_row img{
         width: 200px;
-        margin-left: 0.5rem;
+        /* margin-left: 0.5rem; */
     }
 
     footer .container .big_row .hotline i{
@@ -286,7 +286,7 @@ footer .bottom_footer .payment_img img:hover{
 @media (max-width: 480px){
     footer .container .big_row img{
         width: 150px;
-        margin-left: 0.5rem;
+        /* margin-left: 0.5rem; */
     }
 
     footer .container .big_row p{
