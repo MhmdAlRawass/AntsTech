@@ -93,3 +93,27 @@ window.onload = function () {
         }
     });
 });
+
+// filter header 
+document.addEventListener('DOMContentLoaded', function() {
+  // Main filter category toggle
+  document.querySelectorAll('.filter_item_header').forEach(header => {
+      header.addEventListener('click', function() {
+          this.closest('.filter_item').classList.toggle('active');
+      });
+  });
+
+  // Expandable items toggle
+  document.querySelectorAll('.item-expand p').forEach(expand => {
+      expand.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const parentItem = this.closest('.item');
+          parentItem.classList.toggle('active');
+          
+          // Close other expanded items at the same level
+          const siblings = Array.from(parentItem.parentNode.children)
+                              .filter(child => child !== parentItem);
+          siblings.forEach(sibling => sibling.classList.remove('active'));
+      });
+  });
+});

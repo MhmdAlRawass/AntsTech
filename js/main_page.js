@@ -6,13 +6,44 @@ var swiperSlideSwp = new Swiper(".slide-swp", {
     clickable: true
   },
   autoplay: {
-    delay: 3000,
+    delay: 4000,
   },
   loop: true
 });
 
 /* End Swiper */
-
+// Start Companies Slider 
+document.addEventListener('DOMContentLoaded', function() {
+  new Swiper('.companies_swiper', {
+      loop: true,
+      autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+      },
+      slidesPerView: 5,
+      spaceBetween: 30,
+      breakpoints: {
+          
+          320: {
+              slidesPerView: 2,
+              spaceBetween: 20
+          },
+          480: {
+              slidesPerView: 3,
+              spaceBetween: 30
+          },
+          768: {
+              slidesPerView: 4,
+              spaceBetween: 40
+          },
+          1024: {
+              slidesPerView: 5,
+              spaceBetween: 50
+          }
+      },
+  });
+});
+// End companies slider
 
 /* Initialize Sale_sec */
 var swiperSaleSec = new Swiper(".sale_sec", {
