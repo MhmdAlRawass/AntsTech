@@ -77,68 +77,73 @@
 /* End of Swiper */
 
 /* Start Companies Slider */
-
-.companies_slider {
-    padding: 40px 0;
-}
-
-.companies_swiper {
-    height: 100px;
-    padding: 20px 0;
-}
-
-.company {
+.logo-carousel {
+    --logo-size: clamp(60px, 12vw, 100px); 
+    --logo-margin: clamp(15px, 3vw, 40px);
+    --gradient-width: 30px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.logo-carousel .logos {
+    overflow: hidden;
+    width: 86%;
+    padding: 2rem 0;
+    white-space: nowrap;
+    position: relative;
+    border-radius: 12px;
+}
+
+/* Gradient overlays */
+.logo-carousel .logos:before,
+.logo-carousel .logos:after {
+    position: absolute;
+    top: 0;
+    width: var(--gradient-width);
     height: 100%;
-    padding: 0 15px;
+    content: "";
+    z-index: 2;
 }
 
-.company img {
-    max-width: 100%;
+.logo-carousel .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+}
+
+.logo-carousel .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+}
+
+/* Animation container */
+.logo-carousel .logos-slide {
+    display: inline-flex;
+    animation: 35s slide infinite linear;
+    padding: 0 10px; 
+}
+
+/* Individual logos */
+.logo-carousel .logos-slide img {
+    width: var(--logo-size);
     height: auto;
-    max-height: 60px;
-    width: auto;
+    aspect-ratio: 1;
+    margin: 0 var(--logo-margin);
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
     object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
 }
 
-.company:hover img {
-    filter: grayscale(0%);
+/* Hover effects */
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
 }
 
 /* End Companies Slider */
-
-/* Start Companies Slider */
-.companies_slider {
-    margin: 2rem 3rem;
-}
-
-.companies_slider .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.companies_slider .swiper-wrapper .company{
-    width: 15%;
-}
-
-.companies_slider .company img{
-    width: 50%;
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in-out;
-}
-
-.companies_slider .company img:hover{
-    filter: grayscale(0%);
-    transition: all 0.3s ease-in-out;
-}
-/* End Companies Slider */
-
 /* Start Banners */
 
 .banner {
@@ -664,3 +669,5 @@
     overflow: inherit !important;
     overflow-x: clip !important;
 }
+
+/*  */

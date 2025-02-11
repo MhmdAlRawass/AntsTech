@@ -95,25 +95,71 @@ window.onload = function () {
 });
 
 // filter header 
-document.addEventListener('DOMContentLoaded', function() {
-  // Main filter category toggle
-  document.querySelectorAll('.filter_item_header').forEach(header => {
-      header.addEventListener('click', function() {
-          this.closest('.filter_item').classList.toggle('active');
-      });
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//   // Main filter category toggle
+//   document.querySelectorAll('.filter_item_header').forEach(header => {
+//       header.addEventListener('click', function() {
+//           this.closest('.filter_item').classList.toggle('active');
+//       });
+//   });
 
-  // Expandable items toggle
-  document.querySelectorAll('.item-expand p').forEach(expand => {
-      expand.addEventListener('click', function(e) {
-          e.stopPropagation();
-          const parentItem = this.closest('.item');
-          parentItem.classList.toggle('active');
+//   // Expandable items toggle
+//   document.querySelectorAll('.item-expand p').forEach(expand => {
+//       expand.addEventListener('click', function(e) {
+//           e.stopPropagation();
+//           const parentItem = this.closest('.item');
+//           parentItem.classList.toggle('active');
           
-          // Close other expanded items at the same level
-          const siblings = Array.from(parentItem.parentNode.children)
-                              .filter(child => child !== parentItem);
-          siblings.forEach(sibling => sibling.classList.remove('active'));
-      });
-  });
-});
+//           // Close other expanded items at the same level
+//           const siblings = Array.from(parentItem.parentNode.children)
+//                               .filter(child => child !== parentItem);
+//           siblings.forEach(sibling => sibling.classList.remove('active'));
+//       });
+//   });
+// });
+
+// Toggle expand
+function toggleExpand(event, element) {
+  // Stop event from bubbling to parent items
+  event.stopPropagation();
+
+  // Toggle the "expanded" class
+  element.classList.toggle("active");
+
+  // Update the icon dynamically
+  let icon = element.querySelector(".toggle-icon");
+  if (icon) {
+    icon.textContent = element.classList.contains("expanded") ? "−" : "+";
+  }
+}
+
+function toggleExpandSpecificItem(event, element){
+  event.stopPropagation();
+
+  const parent = element.closest(".item"); 
+
+    if (element.classList.contains("expand")) {
+        parent.querySelector(".expand").classList.add("clicked");
+        parent.querySelector(".minimize").classList.remove("clicked");
+    } else {
+        parent.querySelector(".expand").classList.remove("clicked");
+        parent.querySelector(".minimize").classList.add("clicked");
+    }
+}
+
+function toggleExpandSpecificItem2(event, element) {
+  event.stopPropagation(); // Prevent unwanted bubbling
+
+  const parent = element.closest(".sub-item"); // Use .item instead of .item-2
+  const expandedItems = parent.querySelector(".expanded-items-2"); // Target the expandable section
+
+  if (element.classList.contains("expand-2")) {
+    parent.querySelector(".expand-2").classList.add("clicked");
+    parent.querySelector(".minimize-2").classList.remove("clicked");
+    expandedItems.style.maxHeight = expandedItems.scrollHeight + "px"; // Expand smoothly
+} else {
+    parent.querySelector(".expand-2").classList.remove("clicked");
+    parent.querySelector(".minimize-2").classList.add("clicked");
+    expandedItems.style.maxHeight = "0"; // Collapse smoothly
+}
+}

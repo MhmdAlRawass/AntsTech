@@ -85,89 +85,175 @@
     accent-color: var(--main-color);
 }
 
-
-
 .all_products .filter span {
     font-size: 14px;
 }
 
-.all_products .filter .filter_item .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-/* Expand Items filter */
-
-.all_products .filter .filter_item .item-expand{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    animation: fadeIn 0.3s ease-in-out;
-
-}
-.all_products .filter .filter_item .item-expand p{
-    cursor: pointer;
-}
-
-.all_products .filter .filter_item .item-expand .minimize{
-    display: none;
-}
-
-.all_products .filter .filter_item .item-expand .quantity{
-    font-size: 0.8rem;
-    color: var(--main-color);
-}
-
-.all_products .filter .filter_item .item {
+/* Base Filter Styles */
+.all_products .filter {
+    --expand-indicator-size: 20px;
+  }
+  
+  /* Filter Content Transitions */
+  .all_products .filter .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .all_products .filter .filter_item:has(.filter_item_header.active) .content {
+    max-height: 400px;
+  }
+  
+  /* Filter Items */
+  .all_products .filter .filter_item .item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     margin-top: 10px;
-}
+    width: 100%;
+  }
 
-.all_products .filter .filter_item .item > :not(.expanded-items) {
+  .all_products .filter .filter_item .sub-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Expandable Item Components */
+  .all_products .filter .filter_item .item-expand {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-}
-
-.all_products .filter .filter_item .expanded-items {
-    flex-basis: 100%; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .all_products .filter .filter_item .item-expand .quantity {
+    font-size: 0.8rem;
+    color: var(--main-color);
+  }
+  
+  /* Expanded Content Areas */
+  .all_products .filter .expanded-items {
+    flex-basis: 100%;
     width: 100%;
     display: none;
-    margin: 0 1.5rem;
-    padding-left: 1rem;
+    margin: 0 0.5rem;
+    padding-left: 0.6em;
     border-left: 2px solid #eee;
-    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .all_products .filter .filter_item .expanded-items-2 {
+    flex-basis: 100%;
+    width: 100%;
+    display: none;
+    margin: 0 0.5rem;
+    padding-left: 0.6em;
+    border-left: 2px solid #eee;
+  }
+  
+  /* Expand/Collapse States */
+  .all_products .filter .item:has(.expand.clicked) .expanded-items,
+  .all_products .filter .filter_item .expanded-items-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .all_products .filter .item .expand-control {
+    display: flex;
+    cursor: pointer;
+  }
+  .all_products .filter .item .minimize,
+.all_products .filter .sub-item .minimize-2 {
+  display: none;
 }
 
-.all_products .filter .filter_item .item.active .expanded-items {
-    display: block;
+.all_products .filter .item:has(.expand.clicked) .expand,
+.all_products .filter .sub-item:has(.expand-2.clicked) .expand-2 {
+  display: none;
 }
 
-.all_products .filter .filter_item .item-expand p {
-    transition: transform 0.3s ease;
-}
-.all_products .filter .filter_item .item.active .item-expand p {
-    /* transform: rotate(45deg); */
+.all_products .filter .item:has(.expand.clicked) .minimize,
+.all_products .filter .sub-item:has(.expand-2.clicked) .minimize-2 {
+  display: flex;
 }
 
-@keyframes fadeIn {
+/* Add smooth expand/collapse effect */
+.all_products .filter .sub-item .expanded-items-2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.all_products .filter .sub-item .expanded-items-2 span{
+    margin: 0.2rem 0;
+}
+
+.all_products .filter .sub-item:has(.expand-2.clicked) .expanded-items-2 {
+  max-height: 500px; /* Adjust this value based on your content */
+}
+
+  
+  /* Nested Items (Level 2) */
+  .all_products .filter .filter_item .item-2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+/*   
+  .all_products .filter .expanded-items-2 {
+    flex-basis: 100%;
+    width: 100%;
+    display: none;
+    margin: 0 0.5rem;
+    padding-left: 0.6em;
+    border-left: 2px solid #eee;
+  } */
+  
+  /* Animations */
+  @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.all_products .filter .item.active .item-expand p {
-    /* transform: rotate(45deg); */
-}
-
-.all_products .filter .filter_item .item .color {
-    width: 20px;
-    height: 20px;
+  }
+  
+  .all_products .filter .expanded-items,
+  .all_products .filter .expanded-items-2 {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Interactive Elements */
+  .all_products .filter .filter_item_header .fa-chevron-down {
+    transition: transform 0.3s ease;
+  }
+  
+  .all_products .filter .filter_item_header.active .fa-chevron-down {
+    transform: rotate(180deg);
+  }
+  
+  /* Color Swatches */
+  .all_products .filter .item .color {
+    width: var(--expand-indicator-size);
+    height: var(--expand-indicator-size);
     border-radius: 5px;
-}
+  }
+  
+  /* State Management */
+  .all_products .filter .item.active .item-expand p {
+    transform: rotate(45deg);
+  }
+
+/* End filter activation */
+
 
 /* START OF PRICE RANGE SLIDER IN THE FILTER */
 
@@ -447,48 +533,6 @@ i[data-tooltip] {
     z-index: 999;
 }
 
-/* Filter header toggle */
-.all_products .filter .content{
-    display: none;
-}
-
-.all_products .filter .filter_item.active .content{
-    display: block;
-    transform: all 0.3s ease;
-}
-
-.all_products .filter .item.active .expand{
-    display: none;
-}
-
-
-.all_products .filter .item.active .minimize{
-    display: flex;
-}
-
-.all_products .filter .filter_item_header .fa-chevron-down {
-    transition: transform 0.3s ease;
-}
-
-.all_products .filter .filter_item.active .fa-chevron-down {
-    transform: rotate(180deg);
-}
-
-.all_products .filter .filter_item{
-    transition: all 0.3s ease;
-}
-
-.all_products .filter .content{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.all_products .filter .filter_item.active .content{
-    max-height: 4000px;
-    transition: max-height 0.5s ease-in;
-    /* overflow-y: scroll; */
-}
 
 
 
