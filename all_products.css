@@ -1,0 +1,617 @@
+@import url('header.css');
+@import url('cart.css');
+@import url('main_page.css');
+@import url('footer.css');
+@import url('ItemsDetails.css');
+
+/* Start of the Title Top Page */
+
+
+/* FILTER BUTTON */
+.filter-container {
+    display: none;  
+    padding: 10px 20px;
+    color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* ------ */
+
+.all_products {
+    background: #fff;
+}
+
+.top_page_title {
+    text-align: center;
+    padding: 40px 0;
+    /* padding-top: 20px; */
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+  .top_page_title{
+    padding: 20px 0;
+  }
+  
+}
+
+.top_page_title h1 {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 25px;
+}
+
+.top_page_title p {
+    font-size: 13px;
+    width: 60%;
+    margin: auto;
+    color: var(--parg-color);
+}
+
+.top_page_title img{
+    width: 250px;
+}
+
+@media (max-width: 768px) {
+    
+    .top_page_title img{
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .top_page_title {
+      padding-top: 0;
+    }
+
+    .top_page_title img{
+        width: 140px;
+    }
+}
+
+.all_products .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* margin-top: -120px; */
+    margin-bottom: 30px;
+    gap: 1.5rem;
+}
+
+/* Start of the right Filter */
+
+.all_products .filter {
+    background: #fff;
+    width: 280px;
+    text-transform: capitalize;
+    padding: 20px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.all_products .filter .filter-header{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.all_products .filter .filter-header i{
+  display: none;
+}
+
+.all_products .filter_item_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.all_products .filter input {
+    cursor: pointer;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.all_products .filter input:checked {
+    accent-color: var(--main-color);
+}
+
+.all_products .filter span {
+    font-size: 14px;
+}
+
+/* Base Filter Styles */
+.all_products .filter {
+    --expand-indicator-size: 20px;
+  }
+  
+  /* Filter Content Transitions */
+  .all_products .filter .content {
+    max-height: 0;
+    overflow-y: auto;
+    transition: max-height 0.3s ease;
+  }
+  
+  .all_products .filter .filter_item:has(.filter_item_header.active) .content {
+    max-height: 400px;
+  }
+  
+  /* Filter Items */
+  .all_products .filter .filter_item .item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .all_products .filter .filter_item .sub-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Expandable Item Components */
+  .all_products .filter .filter_item .item-expand {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .all_products .filter .filter_item .item-expand .quantity {
+    font-size: 0.8rem;
+    color: var(--main-color);
+  }
+  
+  /* Expanded Content Areas */
+  .all_products .filter .expanded-items {
+    flex-basis: 100%;
+    width: 100%;
+    display: none;
+    margin: 0 0.5rem;
+    padding-left: 0.6em;
+    border-left: 2px solid #eee;
+  }
+
+  .all_products .filter .filter_item .expanded-items-2 {
+    flex-basis: 100%;
+    width: 100%;
+    display: none;
+    margin: 0 0.5rem;
+    padding-left: 0.6em;
+    border-left: 2px solid #eee;
+  }
+  
+  /* Expand/Collapse States */
+  .all_products .filter .item:has(.expand.clicked) .expanded-items,
+  .all_products .filter .filter_item .expanded-items-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .all_products .filter .item .expand-control {
+    display: flex;
+    cursor: pointer;
+  }
+  .all_products .filter .item .minimize,
+.all_products .filter .sub-item .minimize-2 {
+  display: none;
+}
+
+.all_products .filter .item:has(.expand.clicked) .expand,
+.all_products .filter .sub-item:has(.expand-2.clicked) .expand-2 {
+  display: none;
+}
+
+.all_products .filter .item:has(.expand.clicked) .minimize,
+.all_products .filter .sub-item:has(.expand-2.clicked) .minimize-2 {
+  display: flex;
+}
+
+/* Add smooth expand/collapse effect */
+.all_products .filter .sub-item .expanded-items-2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.all_products .filter .sub-item .expanded-items-2 span{
+    margin: 0.2rem 0;
+}
+
+.all_products .filter .sub-item:has(.expand-2.clicked) .expanded-items-2 {
+  max-height: 500px; /* Adjust this value based on your content */
+}
+
+  
+  /* Nested Items (Level 2) */
+  .all_products .filter .filter_item .item-2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+/*   
+  .all_products .filter .expanded-items-2 {
+    flex-basis: 100%;
+    width: 100%;
+    display: none;
+    margin: 0 0.5rem;
+    padding-left: 0.6em;
+    border-left: 2px solid #eee;
+  } */
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .all_products .filter .expanded-items,
+  .all_products .filter .expanded-items-2 {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Interactive Elements */
+  .all_products .filter .filter_item_header .fa-chevron-down {
+    transition: transform 0.3s ease;
+  }
+  
+  .all_products .filter .filter_item_header.active .fa-chevron-down {
+    transform: rotate(180deg);
+  }
+  
+  /* Color Swatches */
+  .all_products .filter .item .color {
+    width: var(--expand-indicator-size);
+    height: var(--expand-indicator-size);
+    border-radius: 5px;
+  }
+  
+  /* State Management */
+  .all_products .filter .item.active .item-expand p {
+    transform: rotate(45deg);
+  }
+
+/* End filter activation */
+
+
+/* START OF PRICE RANGE SLIDER IN THE FILTER */
+
+.double-slider-box {
+    border-radius: 10px;
+}
+
+h3.range-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 25px;
+}
+
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    margin: 40px 0 20px 0;
+    background-color: var(--parg-color);
+    border-radius: 20px;
+}
+
+.slider-track {
+    height: 100%;
+    position: absolute;
+    background-color: #fe696a;
+}
+
+.range-slider input {
+    position: absolute;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    background: #FFF;
+    pointer-events: auto;
+    appearance: none;
+    cursor: pointer;
+    box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    background: #FFF;
+    pointer-events: auto;
+    -moz-appearance: none;
+    cursor: pointer;
+    box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);
+}
+
+.all_products .filter .double-slider-box .range-slider .tooltip1 {
+    padding: 4px 8px;
+    border: 0;
+    background: var(--dark-color);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+    border-radius: .25rem;
+    bottom: 120%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.min-tooltip1 {
+    left: 50%;
+    transform: translateX(-30%) translateY(-50%);
+    z-index: 5;
+}
+
+.max-tooltip1 {
+    right: 50%;
+    transform: translateX(30%) translateY(-50%);
+    z-index: 5;
+}
+
+.input-box {
+    display: flex;
+}
+
+.min-box,
+.max-box {
+    width: 50%;
+}
+
+.min-box {
+    padding-right: .5rem;
+    margin-right: .5rem;
+}
+
+.input-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-addon {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--dark-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: .25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-field {
+    margin-left: -1px;
+    padding: 5px 10px;
+    font-size: 0.8125rem;
+    border-radius: .25rem;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    color: var(--dark-color);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+/* END OF PRICE RANGE SLIDER IN THE FILTER */
+
+/* Start Apply Btn */
+
+/* .filter .apply-btn-container{
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+} */
+
+.filter .apply-btn{
+  display: none;
+  margin: 1rem 0;
+  padding: 0.6rem 2rem;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+/* End Apply Btn */
+/* Start Reset Btn */
+
+
+/* .filter .reset-btn-container{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+} */
+
+.filter .reset-btn{
+  display: none;
+  padding: 0.6rem 2rem;
+  background-color: var(--parg-color);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+/* End Reset Btn */
+
+/* END OF THE RIGHT FILTER */
+
+/* Start of product right side!! */
+
+.all_products .listed_products {
+    width: calc(100% - 300px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Size of each product !!!!! HERE FOR MAKING FIXED WIDTH */
+.listed_products .swiper-slide{
+    width: 90%;
+    min-height: 300px !important;
+    position: relative;
+}
+
+
+.all_products .listed_products .product {
+    position: relative;
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    flex-direction: none;
+    transition: 0.3s ease;
+}
+
+.all_products .listed_products .product {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.product:hover {
+    z-index: 99999;
+}
+
+.all_products .listed_products .product:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--border-color);
+}
+
+.all_products .listed_products .product .name_product {
+    font-size: 14px;
+}
+
+.all_products .listed_products .product .product_specs li {
+    font-size: 13px;
+}
+
+.all_products .listed_products .product .sales_discount {
+    font-size: 12px;
+}
+
+.price p {
+    font-size: 13px;
+}
+
+/* Start END PAGE PAGINATION */
+
+.pagination {
+    padding: 10px 20px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.pagination .btn_page {
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.pagination .btn_page:hover {
+    color: var(--main-color);
+}
+
+.pagination .num_page {
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+}
+
+.pagination .num_page.active {
+    color: var(--border-color);
+}
+
+.pagination .num_page.active:hover {
+    color: var(--dark-color);
+}
+
+.pagination .num_page:hover {
+    border: 1px solid var(--border-color);
+    background: var(--border-color);
+    cursor: pointer;
+}
+
+/* END END PAGE PAGINATION */
+
+
+/* tooltip */
+i[data-tooltip] {
+    z-index: 999;
+}
+
+
+
+
