@@ -6,8 +6,9 @@
     }
 
     .logo-carousel .logos {
-        width: 77%;
+        width: 100%;
     }   
+
 }
 
 @media (max-width : 1500px){
@@ -19,7 +20,7 @@
 
 
     .logo-carousel .logos {
-        width: 90%;
+        width: 100%;
     }   
 }
 
@@ -115,6 +116,7 @@
     .logo-carousel {
         padding: 0;
     }
+    
 
     .logo-carousel .logos-slide img {
         width: 80px;
@@ -227,8 +229,6 @@
         display: none !important; 
     }
 }
-
-
 
 @media (max-width: 600px) {
 

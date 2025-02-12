@@ -12,11 +12,8 @@ footer {
 
 footer .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
+    flex-direction: row; 
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     gap: 30px;
@@ -34,7 +31,6 @@ footer .container {
 .footer-links {
     display: flex;
     justify-content: space-evenly;
-    
     flex-wrap: wrap;
     gap: 40px;
 }

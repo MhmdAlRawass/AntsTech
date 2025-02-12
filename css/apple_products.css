@@ -24,10 +24,9 @@
     background: #fff;
 }
 
-.top_page_title {
-    text-align: center;
+.all_products .top_page_title {
     padding: 20px 0;
-    padding-top: 20px;
+    padding-top: 25px;
     background: #fff;
 }
 
@@ -45,7 +44,7 @@
 }
 
 .top_page_title img{
-    width: 250px;
+    width: 150px;
 }
 
 @media (max-width: 768px) {

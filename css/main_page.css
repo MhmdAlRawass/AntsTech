@@ -78,35 +78,33 @@
 
 /* Start Companies Slider */
 .logo-carousel {
-    --logo-size: clamp(40px, 12vw, 100px); 
+    --logo-size: clamp(20px, 6vw, 70px); 
     --logo-margin: clamp(10px, 3vw, 40px);
     --gradient-width: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
     margin: 0 auto;
     max-width: 1600px;
-    width: 95%;
+    width: 77%;
 }
 
 .logo-carousel .logo-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: min(90%, 250px);
+    width: min(90%, 160px);
     height: auto;
     /* min-height: 170px; */
     /* margin: 0 auto 2rem; */
-    padding: 1.5rem;
     /* background-color: aqua; */
+    padding-left: 10px;
     border-radius: 12px;
 } 
 
 .logo-carousel .logo-header h3 {
-    font-size: clamp(2rem, 5vw, 3.125rem);
+    font-size: clamp(1.5rem, 2vw, 1rem);
     text-align: start;
     color: var(--main-color);
     line-height: 1.2;
@@ -114,7 +112,7 @@
 }
 
 .logo-carousel .logo-header h3 span {
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1rem, 2vw, rem);
     color: var(--dark-color);
     display: block;
 }
@@ -142,19 +140,18 @@
 
 .logo-carousel .logos:before {
     left: 0;
-    /* background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); */
+    background: linear-gradient(to right, rgba(245, 246, 249, 1), rgba(245, 246, 249, 0.5), rgba(245, 246, 249, 0));
 }
 
 .logo-carousel .logos:after {
     right: 0;
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); */
+    background: linear-gradient(to left, rgba(245, 246, 249, 1), rgba(245, 246, 249, 0.5), rgba(245, 246, 249, 0));
 }
 
 /* Animation container */
 .logo-carousel .logos-slide {
     display: inline-flex;
     animation: 35s slide infinite linear;
-    padding: 0 1rem;
 }
 
 /* Individual logos */
@@ -169,6 +166,7 @@
 }
 
 /* End Companies Slider */
+
 /* Start Banners */
 
 .banner {
