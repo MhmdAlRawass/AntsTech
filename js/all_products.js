@@ -74,6 +74,7 @@ window.onload = function () {
     const btn = document.querySelector('.filter-container');
     const filter = document.querySelector('.filter');
     const overlay = document.querySelector('.filter-overlay');
+    const closeBtn = document.querySelector('#close-filter-sidebar');
 
     btn.addEventListener('click', () => {
         filter.classList.add('active');
@@ -84,6 +85,11 @@ window.onload = function () {
         filter.classList.remove('active');
         overlay.classList.remove('active');
     });
+
+    closeBtn.addEventListener('click', () => {
+      filter.classList.remove('active');
+      overlay.classList.remove('active');
+  });
 
     // Close filter when window is resized above 992px
     window.addEventListener('resize', () => {

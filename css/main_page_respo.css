@@ -100,11 +100,21 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .logo-carousel {
+        --gradient-width: 20px;
+    }
+}
+
 @media (max-width: 992px) {
     /* To disable all hovering  */
     /* *:hover {
         pointer-events: none;
     }  */
+
+    .logo-carousel {
+        padding: 0;
+    }
 
     .logo-carousel .logos-slide img {
         width: 80px;
@@ -185,6 +195,17 @@
 
 /* Remove hover effects */
 @media (max-width: 768px) { 
+
+    .logo-carousel {
+        --logo-size: clamp(35px, 15vw, 80px);
+        --logo-margin: clamp(8px, 2vw, 20px);
+        --gradient-width: 15px;
+    }
+
+    .logo-carousel .logos-slide {
+        animation-duration: 25s;
+    }
+
     .img_product:hover img:first-child {
         opacity: 1;
     }
@@ -205,22 +226,40 @@
     .expand-button {
         display: none !important; 
     }
-
-    .logo-carousel {
-        --logo-size: 50px;
-        --logo-margin: 10px;
-        --gradient-width: 15px;
-    }
-    
-    .logo-carousel .logos {
-        width: 100%;
-        border-radius: 0;
-    }
 }
 
 
 
 @media (max-width: 600px) {
+
+    .logo-carousel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-carousel .logo-header{
+        padding: 0;
+        /* padding-bottom: 2rem; */
+    }
+
+    .logo-carousel .logo-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .logo-carousel .logo-header h3 span{
+        font-size: 1.5rem;
+    }
+
+    .logo-carousel .logos{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-carousel .logos img{
+        width: 50px;
+    }
+
     h1, h2, h3, h4,h5, h6, p, span, strong, a, li, button, input, label{
         font-size: smaller;
     }
@@ -279,12 +318,30 @@
     .logo-carousel .logos-slide {
         animation-duration: 25s; /* Faster animation for mobile */
     }
+
+    .logo-carousel {
+        --gradient-width: 10px;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .logo-carousel .logos:before,
+    .logo-carousel .logos:after {
+        display: none;
+    }
+
+    .logo-carousel .logos-slide {
+        animation-duration: 20s;
+        padding: 0 0.5rem;
+    }
+
+    
 }
 
 
 @media (max-width:431px) {
     .banner{
-        margin-top: -2rem;
+        /* margin-top: -2rem; */
     }
 
     .slide_2 .top_slide{
@@ -312,3 +369,10 @@
         transform: scale(1.1);
     }
 }
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+

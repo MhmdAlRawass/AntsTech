@@ -46,3 +46,38 @@ function ChangeItemImage(imgSrc) {
     event.target.classList.add('active');
 }
 
+// Sale slider
+
+/* Initialize Sale_sec */
+var swiperSaleSec = new Swiper(".sale_sec", {
+    slidesPerView: 5,
+    spaceBetween: 15,
+    autoplay: {
+      delay: 3000,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    loop: true,
+  
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+  
+      580: {
+        slidesPerView: 3,
+      },
+  
+      910: {
+        slidesPerView: 4,
+      },
+  
+      1200: {
+        slidesPerView:5,
+      }
+  
+    }
+  });
+  

@@ -78,23 +78,55 @@
 
 /* Start Companies Slider */
 .logo-carousel {
-    --logo-size: clamp(60px, 12vw, 100px); 
-    --logo-margin: clamp(15px, 3vw, 40px);
+    --logo-size: clamp(40px, 12vw, 100px); 
+    --logo-margin: clamp(10px, 3vw, 40px);
     --gradient-width: 30px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
     max-width: 1600px;
+    width: 95%;
+}
+
+.logo-carousel .logo-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(90%, 250px);
+    height: auto;
+    /* min-height: 170px; */
+    /* margin: 0 auto 2rem; */
+    padding: 1.5rem;
+    /* background-color: aqua; */
+    border-radius: 12px;
+} 
+
+.logo-carousel .logo-header h3 {
+    font-size: clamp(2rem, 5vw, 3.125rem);
+    text-align: start;
+    color: var(--main-color);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.logo-carousel .logo-header h3 span {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--dark-color);
+    display: block;
 }
 
 .logo-carousel .logos {
+    /* background-color: yellowgreen; */
     overflow: hidden;
-    width: 86%;
-    padding: 2rem 0;
-    white-space: nowrap;
+    width: 100%;
+    padding: 1.5rem 0;
     position: relative;
     border-radius: 12px;
+    white-space: nowrap;
 }
 
 /* Gradient overlays */
@@ -110,19 +142,19 @@
 
 .logo-carousel .logos:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+    /* background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); */
 }
 
 .logo-carousel .logos:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)); */
 }
 
 /* Animation container */
 .logo-carousel .logos-slide {
     display: inline-flex;
     animation: 35s slide infinite linear;
-    padding: 0 10px; 
+    padding: 0 1rem;
 }
 
 /* Individual logos */
@@ -136,18 +168,15 @@
     object-fit: contain;
 }
 
-/* Hover effects */
-
-@keyframes slide {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-}
-
 /* End Companies Slider */
 /* Start Banners */
 
 .banner {
     margin: 50px 0;
+}
+
+.first-banner{
+    margin-top: 0;
 }
 
 .banner .container {

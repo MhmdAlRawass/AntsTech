@@ -26,8 +26,16 @@
 
 .top_page_title {
     text-align: center;
-    padding: 180px 0;
+    padding: 40px 0;
+    /* padding-top: 20px; */
     background: #fff;
+}
+
+@media (max-width: 768px) {
+  .top_page_title{
+    padding: 20px 0;
+  }
+  
 }
 
 .top_page_title h1 {
@@ -43,11 +51,33 @@
     color: var(--parg-color);
 }
 
+.top_page_title img{
+    width: 250px;
+}
+
+@media (max-width: 768px) {
+    
+    .top_page_title img{
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .top_page_title {
+      padding-top: 0;
+    }
+
+    .top_page_title img{
+        width: 140px;
+    }
+}
+
 .all_products .container {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    margin-top: -120px;
+    /* margin-top: -120px; */
     margin-bottom: 30px;
     gap: 1.5rem;
 }
@@ -61,6 +91,16 @@
     padding: 20px 25px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
+}
+
+.all_products .filter .filter-header{
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.all_products .filter .filter-header i{
+  display: none;
 }
 
 .all_products .filter_item_header {
@@ -97,7 +137,7 @@
   /* Filter Content Transitions */
   .all_products .filter .content {
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     transition: max-height 0.3s ease;
   }
   
@@ -406,6 +446,45 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* END OF PRICE RANGE SLIDER IN THE FILTER */
+
+/* Start Apply Btn */
+
+/* .filter .apply-btn-container{
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+} */
+
+.filter .apply-btn{
+  display: none;
+  margin: 1rem 0;
+  padding: 0.6rem 2rem;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+/* End Apply Btn */
+/* Start Reset Btn */
+
+
+/* .filter .reset-btn-container{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+} */
+
+.filter .reset-btn{
+  display: none;
+  padding: 0.6rem 2rem;
+  background-color: var(--parg-color);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+/* End Reset Btn */
 
 /* END OF THE RIGHT FILTER */
 
