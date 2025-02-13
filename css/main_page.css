@@ -37,7 +37,7 @@
     flex-direction: row;
     justify-content: center;
     align-self: flex-start;
-    padding: 0.8rem 1rem;
+    padding: 15px;
     border-top: 1px solid var(--border-color);
     width: 100%;
     cursor: pointer;
@@ -72,7 +72,7 @@
     
     position: absolute;
     right: -200px;
-    top: 0;
+    top: -1px;
     z-index: 10;
     width: 200px;
     background: #fff;
@@ -96,7 +96,8 @@
   }
   
   .slider .container .side_bar .category-item .sub-category a{
-    padding: 0.5rem 0.5rem;
+    /* padding: 0.5rem 0.5rem; */
+    padding: 8px 15px;
   }
   
   /* ------------------------------------------------------------------
@@ -114,7 +115,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2rem 1rem;
+    padding: 8px  15px;
     padding-left: 0.5rem;
     width: 100%;
     cursor: pointer;
@@ -141,14 +142,14 @@
     
     position: absolute;
     right: -200px;
-    top: 0;
-    z-index: 11;
+    top: -2px;
+    z-index: 1111;
     width: 200px;
     background: #fff;
     /* border-radius: 10px; */
     /* border-top-right-radius: 10px;
        border-bottom-right-radius: 10px; */
-    padding: 0.5rem 1rem;
+    padding: 8px 15px;
     border: 1px solid var(--border-color);
     border-left: none;
   }
@@ -338,7 +339,7 @@
 /* Start Banners */
 
 .banner {
-    margin: 50px 0;
+    margin: 20px 0;
 }
 
 .first-banner{
@@ -774,6 +775,9 @@
 
 
 /* Start of Banner_2 */
+.banner_2{
+    margin-top: 0;
+}
 
 .banner_2.banner .container .banner_img {
 
@@ -892,7 +896,7 @@
 }
 
 .products-container .products-header .see-all-btn:hover {
-    background-color: var(--dark-red);
+    /* background-color: var(--dark-red); */
 }
 
 .all-products-container {
@@ -914,7 +918,7 @@
     /* box-shadow: var(--shadow); */
     /* border: 1px solid var(--shadow); */
     border-radius: 5px;
-    width: calc(25% - 1rem);
+    width: calc(20% - 1rem);
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -1034,7 +1038,22 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1200px) {
+
+@media (max-width: 1330px) {
+    .all-products-container .product-container {
+        width: calc(25% - 1rem);
+    }
+
+    .all-products-container .product-container:nth-last-child(1){
+        display: none;
+    }
+
+    .all-products-container .product-container:nth-last-child(2){
+        display: none;
+    }
+}
+
+@media (max-width: 1050px) {
     .all-products-container .product-container {
         width: calc(33.33% - 1rem);
     }
@@ -1043,11 +1062,11 @@
         font-size: 15px;
     }
 
-    .all-products-container .product-container:nth-last-child(1){
+    .all-products-container .product-container:nth-last-child(3){
         display: none;
     }
 
-    .all-products-container .product-container:nth-last-child(2){
+    .all-products-container .product-container:nth-last-child(4){
         display: none;
     }
 }

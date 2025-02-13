@@ -378,3 +378,9 @@ header .top-nav .btn_open_menu {
     height: 145px;
     background-color: #fff;
 }
+@media (max-width:992px){
+    .spacer{
+        /* display: none; */
+        height: 130px !important;
+    }
+}

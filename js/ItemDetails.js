@@ -81,3 +81,15 @@ var swiperSaleSec = new Swiper(".sale_sec", {
     }
   });
   
+  
+/* Add event listeners to stop and start autoplay on hover */
+const productCards = document.querySelectorAll('.product');
+
+productCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    swiperSaleSec.autoplay.stop();
+  });
+  card.addEventListener('mouseleave', () => {
+    swiperSaleSec.autoplay.start();
+  });
+});

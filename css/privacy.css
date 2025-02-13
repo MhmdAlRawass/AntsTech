@@ -38,7 +38,7 @@
 
 /* Main Section Styles */
 .section-1 {
-  margin-top: 140px;
+  /* margin-top: 140px; */
   padding: 2rem;
   animation: fadeInUp 1s ease-out;
   background-color: #f9f9f9;
@@ -152,73 +152,6 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
-/* Responsive */
-@media (max-width:992px) {
-  .section-1 {
-    margin-top: 130px;
-    padding: 32px 8px;
-  }
-
-  .section-1 .row {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .section-1 .row .left-section {
-    justify-content: center;
-    align-items: center;
-    /* text-align: center; */
-  }
-
-  .right-section .main-form form .row {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-}
-
-@media (max-width:600px) {
-  .section-1 {
-    margin-top: 110px;
-  }
-  .section-1 h2 {
-    font-size: 1.25rem !important;
-    color: black;
-  }
-
-  .section-1 h3 {
-    font-size: 1.125rem !important;
-  }
-
-  .section-1 h5 {
-    font-size: 1rem !important;
-  }
-
-  .section-1 .column i {
-    font-size: 1rem !important;
-  }
-
-  .section-1 p, .section-1 a, .section-1 .working-hours {
-    font-size: 0.8rem !important;
-  }
-
-  .section-1 .right-section .main-form form input {
-    font-size: 0.8rem !important;
-    font-weight: 300;
-  }
-
-  .section-1 .right-section .main-form form textarea {
-    font-size: 0.8rem !important;
-    font-weight: 300;
-  }
-
-  .section-1 .right-section .main-form form button {
-    font-size: 0.8rem !important;
-  }
-}
-
 /* New Styles for Policy Page */
 .policy-section {
   background-color: #fff;
@@ -262,3 +195,81 @@
   color: var(--main-color);
   margin-right: 0.5rem;
 }
+
+
+
+/* Responsive */
+@media (max-width:992px) {
+  .section-1 {
+    /* margin-top: 130px; */
+    padding: 32px 8px;
+  }
+
+  .spacer{
+    /* display: none; */
+    height: 130px !important;
+  }
+
+  .section-1 .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .section-1 .row .left-section {
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .right-section .main-form form .row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+
+@media (max-width:600px) {
+  .section-1 {
+    /* margin-top: 110px; */
+  }
+  .section-1 h2 {
+    font-size: 1.1rem !important;
+    color: black;
+  }
+
+  .section-1 h3 {
+    font-size: 1rem !important;
+  }
+
+  .section-1 h5 {
+    font-size: 0.9rem !important;
+  }
+
+  .section-1 .column i {
+    font-size: 0.9rem !important;
+  }
+  .policy-section ul li {
+    font-size: 0.8rem;
+  }
+
+  .section-1 p, .section-1 a, .section-1 .working-hours {
+    font-size: 0.7rem !important;
+  }
+
+  .section-1 .right-section .main-form form input {
+    font-size: 0.7rem !important;
+    font-weight: 300;
+  }
+
+  .section-1 .right-section .main-form form textarea {
+    font-size: 0.7rem !important;
+    font-weight: 300;
+  }
+
+  .section-1 .right-section .main-form form button {
+    font-size: 0.7rem !important;
+  }
+}
+
