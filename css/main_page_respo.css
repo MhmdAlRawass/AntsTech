@@ -1,0 +1,404 @@
+@media (max-width:1550px) {
+    .slide_1 .categ_img,
+    .slide_2 .categ_img {
+        /* padding: 10px 5px; */
+        width: 250px;
+    }
+
+    .logo-carousel .logos {
+        width: 100%;
+    }   
+
+}
+
+@media (max-width : 1500px){
+    .slide_1 .categ_img,
+    .slide_2 .categ_img {
+        /* padding: 10px 5px; */
+        width: 270px;
+    }
+
+    .logo-carousel {
+        width: 90%;
+    }
+
+    .logo-carousel .logos {
+        width: 100%;
+    }   
+
+
+}
+
+
+@media (max-width: 1430px) {
+
+    .slide_1 .categ_img,
+    .slide_2 .categ_img {
+        /* padding: 10px 5px; */
+        width: 270px;
+    }
+    
+}
+
+@media (max-width: 1370px) {
+
+    .slide_1 .categ_img,
+    .slide_2 .categ_img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1290px) {
+    /* Remove feature */
+    .features .container .feature_item:last-child {
+        display: none;
+    }
+
+    .slide_1 .categ_img,
+    .slide_2 .categ_img {
+        width: 240px;
+    }
+
+    .slide_1 .swiper-slide{
+        /* min-width: 130px ; */
+    }
+}
+
+@media (max-width: 1200px) {
+    /* Slider */
+    .slider .container .mySwiper {
+        width: 60%;
+    }
+
+    .slide_1 .categ_img,
+    .slide_2 .categ_img {
+        width: 230px;
+    }
+
+    /* remove imgs */
+    .slide_1 .categ_img{
+        display: none;
+    }
+
+    .slide_2 a img{
+        display: none;
+    }
+
+    .slide_1 .mySwiper,
+    .slide_2 .mySwiper{
+        width: 100%;
+    }
+
+    .slide_1 .product_swip {
+        /* width: 100%; */
+    }
+}
+
+@media (max-width: 1080px) {
+    /* Remove feature */
+    .features .container .feature_item:nth-last-child(4) {
+        display: none;
+    }
+
+    /* on sale products slider */
+    .slide {
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo-carousel {
+        --gradient-width: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* To disable all hovering  */
+    /* *:hover {
+        pointer-events: none;
+    }  */
+
+    .logo-carousel {
+        padding: 0;
+    }
+    
+
+    .logo-carousel .logos-slide img {
+        width: 80px;
+    }
+
+    /* Slider */
+    .slider .container .side_bar {
+        display: none;
+    }
+
+    .slider{
+        margin-top: 10px;
+    }
+
+    .banner {
+        margin: 0;
+    }
+
+    .last-banner {
+        margin-bottom: 20px;
+    }
+
+    /* on sale products slider */
+    .slide {
+        margin-bottom: 1.6rem;
+    }
+
+    .slider .container .mySwiper {
+        width: 100%;
+    }
+
+    /* Slider products  */
+    .slide_1 .categ_img{
+        display: none;
+        visibility: hidden;
+    }
+
+    .slide_2 .categ_img{
+        display: none;
+        visibility: hidden;
+
+    }
+    .slide_1 .mySwiper,
+    .slide_2 .mySwiper{
+        width: 100%;
+    }
+
+    
+}
+
+
+@media (max-width: 800px) {
+    /* Remove feature */
+    .features .container {
+        display: none;
+    }
+    
+    /* first banners */
+    .banner {
+        margin-bottom: 0;
+    }
+    
+    /* on sale products slider */
+    .slide {
+        margin-bottom: 0.6rem;
+    }
+    
+    /* second banner */
+    .banner_2{
+        margin-top: 0;
+    }
+
+    .last-banner{
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Remove hover effects */
+@media (max-width: 768px) { 
+
+    .logo-carousel {
+        --logo-size: clamp(35px, 15vw, 80px);
+        --logo-margin: clamp(8px, 2vw, 20px);
+        --gradient-width: 15px;
+        width: 95%;
+    }
+
+    .logo-carousel .logos-slide {
+        animation-duration: 25s;
+    }
+
+    .logo-carousel .logos-slide img{
+        width: 60px;
+    }
+
+    .img_product:hover img:first-child {
+        opacity: 1;
+    }
+
+    .img_product:hover .img_hover {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    .product:hover .icons .fa-heart {
+        visibility: hidden; 
+    }
+
+    .product:hover .product_details {
+        max-height: 0;
+    }
+
+    .expand-button {
+        display: none !important; 
+    }
+}
+
+@media (max-width: 600px) {
+
+    .logo-carousel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-carousel .logo-header{
+        /* padding: 0; */
+        /* padding-bottom: 2rem; */
+    }
+
+    .logo-carousel .logo-header h3{
+        font-size: 1.5rem;
+    }
+
+    .logo-carousel .logo-header h3 span{
+        font-size: 1.2rem;
+    }
+
+    .logo-carousel .logos{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-carousel .logos img{
+        width: 50px;
+    }
+
+    h1, h2, h3, h4,h5, h6, p, span, strong, a, li, button, input, label{
+        font-size: smaller;
+    }
+
+    .product .sales_discount{
+        font-size: 0.7rem;
+    }
+
+    .banner .banner_img:last-child{
+        display: none;
+    }
+
+    .banner .banner_img{
+        flex: 1;
+        
+    }
+    
+
+    .banner .respo-banner{
+        display: flex;
+        width: calc(50% - 0.5rem);
+    }
+
+    .banner .banner_img:first-child{
+        margin-right: 0.5rem;
+    }
+
+    
+
+    /* Btn Swipers  */
+    .slide .container .mySwiper .btn_Swip::after{
+        font-size: 15px;
+        /* margin-bottom: 0; */
+        padding: 0.5rem;
+    }
+
+    .slide h2{
+        font-size: larger;
+    }
+
+    .products-header{
+        font-size: larger;
+    }
+    
+
+    
+}
+
+@media (max-width: 480px) {
+    .logo-carousel {
+        --logo-size: 40px;
+        --gradient-width: 10px;
+    }
+    
+    .logo-carousel .logos-slide {
+        animation-duration: 25s; /* Faster animation for mobile */
+    }
+
+    .logo-carousel {
+        --gradient-width: 10px;
+        width: 95%;
+        border-radius: 0;
+    }
+
+    .logo-carousel .logos {
+        padding:12px 0 ;
+    }
+
+    .logo-carousel .logos-slide {
+        animation-duration: 20s;
+        padding: 0 0.5rem;
+    }
+
+    .logo-carousel .logos-slide img{
+        width: 45px;
+    }
+
+    .logo-carousel .logo-header h3{
+        /* padding-left: 10px; */
+        font-size: 1.2rem;
+    }
+
+    .logo-carousel .logo-header h3 span{
+        font-size: 1rem;
+    }
+
+    .slide_2 .top_slide {
+        padding-right:   0.2rem;
+        padding-top: 2rem;
+    }
+
+    
+}
+
+
+@media (max-width:431px) {
+    .banner{
+        /* margin-top: -2rem; */
+    }
+
+    .slide_2 .top_slide{
+        margin-top: -2rem;
+    }
+
+    .slide h2{
+        font-size: larger;
+    }
+}
+
+@media (pointer: coarse) {
+    .logo-carousel .logos-slide img {
+        filter: grayscale(0%); /* Always show colored on touch devices */
+    }
+}
+
+@media (hover: hover) {
+    .logo-carousel .logos:hover .logos-slide {
+        animation-play-state: paused;
+    }
+    
+    .logo-carousel .logos-slide img:hover {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+

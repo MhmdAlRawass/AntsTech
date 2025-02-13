@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+
+    <!-- Files CSS -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/privacy.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!--Navbar-->
+        <div class="container top-nav">
+
+            <div class="responsive-header-container">
+                <i class="fa-solid fa-bars hamburger" ></i>
+                <a href="index.html" class="logo"><img src="img/ANTS-LOGO.png" alt="AntsTech"></a>
+                <div class="cart_header_respo">
+                    <div onclick="open_cart()" class="icon_cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="count_item">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="search">
+
+                <!-- Dropdown start --> <!-- This should be dynamic  -->
+                <div class="dropdown">
+                    <div id="drop-text" class="dropdown-text">
+                        <span id="span">All</span>
+                        <i id="icon" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul id="list" class="dropdown-list">
+                        <li class="dropdown-list-item">All</li>
+                        <li class="dropdown-list-item">Accessories</li>
+                        <li class="dropdown-list-item">Apple Products</li>
+                        <li class="dropdown-list-item">Laptops</li>
+                        <li class="dropdown-list-item">Printers</li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+
+                <!-- Search box input start -->
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search anything..." />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- Search box input ends -->
+            </form>
+
+            <!-- Login starts -->
+            <div class="login_header">
+                <a href="login.html"><i class="fa-solid fa-user"></i> Login / Register</a>
+            </div>
+            <!-- Login ends -->
+
+            <div class="cart_header">
+
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <!--      here i need the item number to be dynamic  !!!!!**     -->
+                    <span class="count_item">0</span>
+                </div>
+
+                <div class="total_price">
+                    <p>My Cart:</p>
+                    <!--      here i need the cart price to be dynamic  !!!!!**     -->
+                    <p class="price_cart_head">$0</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <nav>
+            <div class="links container">
+
+                <ul id="responsivemenu">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="all_products.html">All Product</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Responsive Sidebar Nav -->
+        <div class="sidebar-overlay"></div>
+        <div class="nav-respo">
+            <div class="links-respo container-respo">
+
+                <div class="nav-header">
+                    <a href="index.html" class="logo"><img src="img/ANTS-LOGO.png" alt=""></a>
+                    <i class="fa-regular fa-circle-xmark" id="close-sidebar"></i>
+                </div>
+
+
+                <ul id="responsivemenu">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="all_products.html">All Product</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+
+                </ul>
+
+                <div class="login-respo">
+                    <a href="login.html"><i class="fa-solid fa-user"></i> Login / Register</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Cart -->
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My Cart <span>(0 Item in Cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+
+            <div class="item_cart">
+                <img src="img/product/product-1.jpg" alt="">
+                <div class="content">
+                    <h4>Iphone 6 new in box</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+            <div class="item_cart">
+                <img src="img/product/product-2.jpg" alt="">
+                <div class="content">
+                    <h4>Samsung Galaxy S4</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>Cart Subtotal</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart">Proceed to Checkout</a>
+                <button onclick="close_cart()" class="btn_cart trans_bg">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="section-1 section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="left-section about">
+                    <div class="column">
+                        <h1>Privacy Policy</h1>
+                        <p><span>Your privacy is important to us.</span></p>
+
+                        
+                        <div class="policy-section">
+                            <h2>Introduction</h2>
+                            <p>Welcome to AntsTech. This Privacy Policy explains how we collect, use, disclose, 
+                                and safeguard your information when you visit our website. <br> Please read this Privacy Policy carefully.</p>
+                                <h2>Information We Collect</h2>
+                                <p>We may collect personal information from you such as your name, email address, and other details when you:</p>
+                                <ul>
+                                    <li>Register on our website</li>
+                                    <li>Subscribe to our newsletter</li>
+                                    <li>Fill out a contact form</li>
+                                    <li>Participate in surveys or contests</li>
+                                </ul>
+                        
+                                <h2>How We Use Your Information</h2>
+                                <p>We may use the information we collect from you for various purposes, including:</p>
+                                <ul>
+                                    <li>To personalize your experience on our website</li>
+                                    <li>To improve our website based on your feedback</li>
+                                    <li>To send periodic emails regarding your account or other products and services</li>
+                                    <li>To follow up with you after correspondence (live chat, email, or phone inquiries)</li>
+                                </ul>
+                        
+                                <h2>Cookies</h2>
+                                <p>We use cookies to enhance your browsing experience. Cookies are small files that a site or its service provider transfers to your device through your browser. They allow the site to recognize your browser and capture certain information.</p>
+                        
+                                <h2>Data Security</h2>
+                                <p>We implement a variety of security measures to maintain the safety of your personal information. However, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+                        
+                                <h2>Third-Party Disclosure</h2>
+                                <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties unless we provide users with advance notice. This does not include website hosting partners and other parties who assist us in operating our website.</p>
+                        
+                                <h2>Changes to This Privacy Policy</h2>
+                                <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- End section -->
+    
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+            <!-- Left Section: Logo -->
+            <div class="footer-logo">
+                <img src="img/ANTS-LOGO.png" alt="Logo">
+            </div>
+
+            <!-- Middle Section: Useful Links & Our Services -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Useful Links</h4>
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="policy.html">Return & Refund Policy</a>
+                        <a href="about_us.html">About us</a>
+                        <a href="contact_us.html">Contact us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <div class="links">
+                        <a href="all_products.html">All Products</a>
+                        <a href="#">Laptops</a>
+                        <a href="#">Computers and & Tech Devices</a>
+                        <a href="#">Apple Products</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Right Section: Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Join Our Newsletter</h4>
+                <p>Stay updated with our latest news and offers by subscribing to our newsletter</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; 2024 <span>AntsTech.</span> All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main_page.js"></script>
+    <script src="js/all_products.js"></script>
+
+    </script> 
+
+</body>
+</html>

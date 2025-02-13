@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntsTech | Products</title>
+
+    <!-- File CSS-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/main_page.css">
+    <link rel="stylesheet" href="css/all_products.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Responsive Files CSS -->
+    <link rel="stylesheet" href="css/header_respo.css">
+    <link rel="stylesheet" href="css/all_products_respo.css">
+
+    <!-- Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!--Navbar-->
+        <div class="container top-nav">
+
+            <div class="responsive-header-container">
+                <i class="fa-solid fa-bars hamburger" ></i>
+                <a href="index.html" class="logo"><img src="img/ANTS-LOGO.png" alt="AntsTech"></a>
+                <div class="cart_header_respo">
+                    <div onclick="open_cart()" class="icon_cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="count_item">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="search">
+
+                <!-- Dropdown start --> <!-- This should be dynamic  -->
+                <div class="dropdown">
+                    <div id="drop-text" class="dropdown-text">
+                        <span id="span">All</span>
+                        <i id="icon" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul id="list" class="dropdown-list">
+                        <li class="dropdown-list-item">All</li>
+                        <li class="dropdown-list-item">Accessories</li>
+                        <li class="dropdown-list-item">Apple Products</li>
+                        <li class="dropdown-list-item">Laptops</li>
+                        <li class="dropdown-list-item">Printers</li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+
+                <!-- Search box input start -->
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search anything..." />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- Search box input ends -->
+            </form>
+
+            <!-- Login starts -->
+            <div class="login_header">
+                <a href="login.html"><i class="fa-solid fa-user"></i> Login / Register</a>
+            </div>
+            <!-- Login ends -->
+
+            <div class="cart_header">
+
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <!--      here i need the item number to be dynamic  !!!!!**     -->
+                    <span class="count_item">0</span>
+                </div>
+
+                <div class="total_price">
+                    <p>My Cart:</p>
+                    <!--      here i need the cart price to be dynamic  !!!!!**     -->
+                    <p class="price_cart_head">$0</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <nav>
+            <div class="links container">
+
+                <ul id="responsivemenu">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="all_products.html">All Product</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Responsive Sidebar Nav -->
+        <div class="sidebar-overlay"></div>
+        <div class="nav-respo">
+            <div class="links-respo container-respo">
+
+                <div class="nav-header">
+                    <a href="index.html" class="logo"><img src="img/ANTS-LOGO.png" alt=""></a>
+                    <i class="fa-regular fa-circle-xmark" id="close-sidebar"></i>
+                </div>
+
+
+                <ul id="responsivemenu">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="all_products.html">All Product</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+
+                </ul>
+
+                <div class="login-respo">
+                    <a href="login.html"><i class="fa-solid fa-user"></i> Login / Register</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+    <div class="spacer"></div>
+    <!-- ---- End Header ---- -->
+
+    <!-- Cart -->
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My Cart <span>(0 Item in Cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+
+            <div class="item_cart">
+                <img src="img/product/product-1.jpg" alt="">
+                <div class="content">
+                    <h4>Iphone 6 new in box</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+            <div class="item_cart">
+                <img src="img/product/product-2.jpg" alt="">
+                <div class="content">
+                    <h4>Samsung Galaxy S4</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>Cart Subtotal</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart">Proceed to Checkout</a>
+                <button onclick="close_cart()" class="btn_cart trans_bg">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+    <!-- ---- End Cart ---- -->
+
+    <div class="top_page_title">
+        <div class="container">
+            <h1>Experience the Future of Technology with AntsTech</h1>
+            <p>Find everything you need to transform your home
+                into a smart, connected space. AntsTech store offers a
+                wide range of products to fit your needs.</p>
+        </div>
+    </div>
+
+    <section class="all_products">
+
+        <div class="container">
+
+            <div class="filter">
+                <div class="filter-header">
+                    <h2>Filter</h2>
+                    <i class="fa-regular fa-circle-xmark" id="close-filter-sidebar"></i>
+                </div>
+                
+
+                <div class="filter_item">
+
+                    <div class="filter_item_header" onclick="toggleExpand(event, this)">
+                        <h4>Category</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+
+                    <div class="content">
+
+                        <!-- main content of specific category -->
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>Apple Laptops</span>
+                                <div class="quantity">(38)</div>
+                            </div>
+                            <input type="checkbox">
+
+                            <!-- Expanded item for apple laptops -->
+                            <div class="expanded-items">
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>Phones</span>
+                                <div class="quantity">(38)</div>
+                            </div>
+                            <input type="checkbox">
+
+                            <!-- Expanded item for apple laptops -->
+                            <div class="expanded-items">
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>Tablets</span>
+                                <div class="quantity">(38)</div>
+                            </div>
+                            <input type="checkbox">
+
+                            <!-- Expanded item for apple laptops -->
+                            <div class="expanded-items">
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>Electronics</span>
+                                <div class="quantity">(38)</div>
+                            </div>
+                            <input type="checkbox">
+
+                            <!-- Expanded item for apple laptops -->
+                            <div class="expanded-items">
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>TV</span>
+                                <div class="quantity">(38)</div>
+                            </div>
+                            <input type="checkbox">
+
+                            <!-- Expanded item for apple laptops -->
+                            <div class="expanded-items">
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>Laptops</span>
+                                <div class="quantity">(38)</div>
+                            </div>
+                            <input type="checkbox">
+
+                            <!-- Expanded item for apple laptops -->
+                            <div class="expanded-items">
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item">
+                                    <div class="item-expand">
+                                        <span>MacBooks</span>
+                                        <div class="quantity">(38)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="filter_item">
+
+                    <div class="filter_item_header" onclick="toggleExpand(event, this)">
+                        <h4>Brand</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>Apple</span>
+                                <div class="quantity">(18)</div>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>Acer</span>
+                                <div class="quantity">(18)</div>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>Samsung</span>
+                                <div class="quantity">(18)</div>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>Intel</span>
+                                <div class="quantity">(18)</div>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Specs -->
+                <div class="filter_item">
+
+                    <div class="filter_item_header" onclick="toggleExpand(event, this)">
+                        <h4>Specs</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>Storage</span>
+                            </div>
+                            <input type="checkbox">
+                            <!-- Expanded item for Storage -->
+                            <div class="expanded-items">
+                                <div class="sub-item">
+                                    <div class="item-expand">
+                                        <p class="expand-2 " onclick="toggleExpandSpecificItem2(event, this)">+</p>
+                                        <p class="minimize-2 clicked" onclick="toggleExpandSpecificItem2(event, this)">-</p>
+                                        <span>SSD</span>
+                                    </div>
+                                    <input type="checkbox">
+                                    <!-- Expanded Items for SSD -->
+                                    <div class="expanded-items-2">
+                                        <div class="item-2">
+                                            <div class="item-expand">
+                                                <span>256GB</span>
+                                                <div class="quantity">(18)</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+    
+                                        <div class="item-2">
+                                            <div class="item-expand">
+                                                <span>512GB</span>
+                                                <div class="quantity">(18)</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+    
+                                        <div class="item-2">
+                                            <div class="item-expand">
+                                                <span>1TB</span>
+                                                <div class="quantity">(18)</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+                                    
+                                    <!--  -->
+                                </div>
+
+                                <!-- 2nd item -->
+                                <div class="sub-item">
+                                    <div class="item-expand">
+                                        <p class="expand-2 " onclick="toggleExpandSpecificItem2(event, this)">+</p>
+                                        <p class="minimize-2 clicked" onclick="toggleExpandSpecificItem2(event, this)">-</p>
+                                        <span>HDD</span>
+                                    </div>
+                                    <input type="checkbox">
+                                    <!-- Expanded Items for SSD -->
+                                    <div class="expanded-items-2">
+                                        <div class="item-2">
+                                            <div class="item-expand">
+                                                <span>256GB</span>
+                                                <div class="quantity">(18)</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+    
+                                        <div class="item-2">
+                                            <div class="item-expand">
+                                                <span>512GB</span>
+                                                <div class="quantity">(18)</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+    
+                                        <div class="item-2">
+                                            <div class="item-expand">
+                                                <span>1TB</span>
+                                                <div class="quantity">(18)</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+                                    
+                                    <!--  -->
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <p class="expand active" onclick="toggleExpandSpecificItem(event, this)">+</p>
+                                <p class="minimize" onclick="toggleExpandSpecificItem(event, this)">-</p>
+                                <span>CPU</span>
+                            </div>
+                            <input type="checkbox">
+                            <!-- Expanded item for phone category -->
+                            <div class="expanded-items">
+                                <div class="item-2">
+                                    <div class="item-expand">
+                                        <span>256GB</span>
+                                        <div class="quantity">(18)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item-2">
+                                    <div class="item-expand">
+                                        <span>512GB</span>
+                                        <div class="quantity">(18)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="item-2">
+                                    <div class="item-expand">
+                                        <span>1TB</span>
+                                        <div class="quantity">(18)</div>
+                                    </div>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="filter_item">
+
+                    <div class="filter_item_header" onclick="toggleExpand(event, this)">
+                        <h4>Condition</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>New</span>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>Open-Box</span>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+
+                        <div class="item">
+                            <div class="item-expand">
+                                <span>Refurbished</span>
+                            </div>
+                            <input type="checkbox">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- <div class="filter_item">
+                    <div class="filter_item_header" onclick="toggleExpand(event, this)">
+                        <h4>Color</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="item">
+                        <span class="color" style="background: red;"></span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="item">
+                        <span class="color" style="background: black;"></span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="item">
+                        <span class="color" style="background: green;"></span>
+                        <input type="checkbox">
+                    </div>
+
+                    <div class="item">
+                        <span class="color" style="background: yellow;"></span>
+                        <input type="checkbox">
+                    </div>
+
+                </div> -->
+
+                <div class="double-slider-box">
+                    <h3 class="range-title">Price</h3>
+                    <div class="range-slider">
+                        <span class="slider-track"></span>
+                        <input type="range" name="min_val" class="min-val" min="0" max="5000" value="0"
+                            oninput="slideMin()">
+                        <input type="range" name="max_val" class="max-val" min="0" max="5000" value="5000"
+                            oninput="slideMax()">
+                        <div class="tooltip1 min-tooltip1"></div>
+                        <div class="tooltip1 max-tooltip1"></div>
+                    </div>
+                    <div class="input-box">
+
+                        <div class="min-box">
+                            <div class="input-wrap">
+                                <span class="input-addon">$</span>
+                                <input type="text" name="min_input" class="input-field min-input"
+                                    onchange="setMinInput()">
+                            </div>
+                        </div>
+
+                        <div class="max-box">
+                            <div class="input-wrap">
+                                <span class="input-addon">$</span>
+                                <input type="text" name="max_input" class="input-field max-input"
+                                    onchange="setMaxInput()">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="apply-btn-container">
+                    <div class="apply-btn">
+                        Apply
+                    </div>
+                </div>
+
+                <div class="reset-btn-container">
+                    <div class="reset-btn">
+                        Reset
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Filters BTN-->
+            <div class="filter-container">
+                <p>Filters</p>
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="listed_products">
+
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product1.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-1.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">Lenovo-THINKPAD-E16-G1-21JN0073US1-450x450</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 220</span></p>
+                                <p class="old_price">$ 240</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product2.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-2.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">Victus Gaming Laptop 15-fa1026nia (803C4EA)</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 2200</span></p>
+                                <p class="old_price">$ 2400</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product3.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-3.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">LG Screen 23' inch</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 220</span></p>
+                                <p class="old_price">$ 240</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product4.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-4.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">Victus Gaming Laptop 15-fa1010ni (A19LKEA)</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 220</span></p>
+                                <p class="old_price">$ 240</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product5.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-5.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">Earpods</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 22</span></p>
+                                <p class="old_price">$ 24</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product6.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-6.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">Lenovo-THINKPAD-E16-G1-21JN0073US1-450x450</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 220</span></p>
+                                <p class="old_price">$ 240</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product ">
+
+                        <span
+                            class="sales_discount">10%</span><!-- here we should do a math calc between the old and new in order to know the percentage -->
+
+                        <div class="img_product">
+                            <img src="img/product/product1.jpg" alt="">
+                            <img class="img_hover" src="img/product/product-1.jpg" alt="">
+                        </div>
+
+                        <h3 class="name_product"><a href="ItemDetails.html">Lenovo-THINKPAD-E16-G1-21JN0073US1-450x450</a></h3>
+
+                        <div class="price-row">
+
+                            <div class="price">
+                                <p><span>$ 220</span></p>
+                                <p class="old_price">$ 240</p>
+                            </div>
+
+                            <div class="icons">
+                                <i class="fa-regular fa-heart" data-tooltip="Add to Wishlist"></i>
+                                <i class="fa-solid fa-cart-shopping" data-tooltip="Add to Cart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="product_details">
+
+                            <div class="product_specs">
+                                <ul>
+                                    <li><strong>Brand:</strong> <span>HP</span></li>
+                                    <li><strong>Processor:</strong> <span> Core i7 13th Gen</span></li>
+                                    <li><strong>RAM:</strong> <span>12GB RAM</span></li>
+                                    <li><strong>SSD:</strong> <span>1TB SSD</span></li>
+                                    <li><strong>Display Size:</strong> <span>17.3"</span></li>
+                                    <li><strong>Display Resolution:</strong> <span>FHD (1920 x 1080)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="expand-button" onclick="toggleDetails(this)">. . .</div>
+
+                            <div class="more_details">
+                                <ul>
+                                    <li><strong>Graphics Card Type:</strong> <span>10 hours</span></li>
+                                    <li><strong>Color:</strong> <span>2.5 kg</span></li>
+                                    <li><strong>Operating System:</strong> <span>2.5 kg</span></li>
+                                    <!-- Add more specs as needed -->
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <span class="btn_page prev"></span><i class="fa-solid fa-angle-left"></i></span>
+            <a href=""> <span class="num_page active">1</span></a>
+            <a href=""> <span class="num_page">2</span></a>
+            <a href=""> <span class="num_page">3</span></a>
+            <a href=""> <span class="num_page">4</span></a>
+            <a href=""> <span class="num_page">5</span></a>
+            <span class="btn_page next"><i class="fa-solid fa-angle-right"></i></span>
+        </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <!-- Left Section: Logo -->
+            <div class="footer-logo">
+                <img src="img/ANTS-LOGO.png" alt="Logo">
+            </div>
+
+            <!-- Middle Section: Useful Links & Our Services -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Useful Links</h4>
+                    <div class="links">
+                        <a href="index.html">Home</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="policy.html">Return & Refund Policy</a>
+                        <a href="about_us.html">About us</a>
+                        <a href="contact_us.html">Contact us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <div class="links">
+                        <a href="all_products.html">All Products</a>
+                        <a href="#">Laptops</a>
+                        <a href="#">Computers and & Tech Devices</a>
+                        <a href="#">Apple Products</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Right Section: Newsletter -->
+            <div class="footer-newsletter">
+                <h4>Join Our Newsletter</h4>
+                <p>Stay updated with our latest news and offers by subscribing to our newsletter</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; 2024 <span>AntsTech.</span> All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main_page.js"></script>
+    <script src="js/all_products.js"></script>
+
+</body>
+
+</html>

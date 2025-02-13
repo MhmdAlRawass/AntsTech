@@ -1,0 +1,264 @@
+@import url('header.css');
+@import url('main_page.css');
+@import url('footer.css');
+
+/* Animation Keyframes */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Section Styles */
+.section-1 {
+  margin-top: 140px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out;
+  background-color: #f9f9f9;
+}
+
+.section-1 .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Left Section ===== */
+.section-1 .row .left-section {
+  flex: 1 1 40%;
+  padding: 1rem;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.section-1 .row .left-section .column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-1 .row .left-section .column h1 {
+  font-size: 2rem; 
+  color: var(--main-color);
+  margin: auto;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-1 .row .left-section .column p span {
+  font-size: 1rem; 
+  color: var(--dark-color);
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+  font-style: italic;
+  display: block;
+  text-align: center;
+}
+
+.section-1 .row .left-section .column h2 {
+  font-size: 1rem; 
+  color: var(--main-color);
+  margin: 0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.section-1 .row .left-section .column p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--dark-color);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.left-section .contact-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-section .contact-info {
+  flex: 1 1 40%;
+}
+
+.left-section .contact-info i {
+  display: inline-block;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  /* Adding a subtle fade-in animation to icons */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.left-section .contact-info i:hover {
+  transform: scale(1.1);
+}
+
+.left-section .contact-info h5 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.left-section .contact-info p {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.left-section .contact-info a {
+  display: block;
+  line-height: 1.4rem;
+  color: var(--parg-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.left-section .contact-info a:hover {
+  color: var(--main-color);
+}
+
+.left-section .working-hours {
+  padding-top: 1rem;
+  color: var(--parg-color);
+  border-top: 1px solid var(--border-color);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive */
+@media (max-width:992px) {
+  .section-1 {
+    margin-top: 130px;
+    padding: 32px 8px;
+  }
+
+  .section-1 .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .section-1 .row .left-section {
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+  }
+
+  .right-section .main-form form .row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+
+@media (max-width:600px) {
+  .section-1 {
+    margin-top: 110px;
+  }
+  .section-1 h2 {
+    font-size: 1.25rem !important;
+    color: black;
+  }
+
+  .section-1 h3 {
+    font-size: 1.125rem !important;
+  }
+
+  .section-1 h5 {
+    font-size: 1rem !important;
+  }
+
+  .section-1 .column i {
+    font-size: 1rem !important;
+  }
+
+  .section-1 p, .section-1 a, .section-1 .working-hours {
+    font-size: 0.8rem !important;
+  }
+
+  .section-1 .right-section .main-form form input {
+    font-size: 0.8rem !important;
+    font-weight: 300;
+  }
+
+  .section-1 .right-section .main-form form textarea {
+    font-size: 0.8rem !important;
+    font-weight: 300;
+  }
+
+  .section-1 .right-section .main-form form button {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* New Styles for Policy Page */
+.policy-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.policy-section h5 {
+  font-size: 1.25rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.policy-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.policy-section p i {
+  color: var(--main-color);
+  margin-right: 0.5rem;
+}
+
+.policy-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-section ul li {
+  list-style-type: disc;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.policy-section ul li i {
+  color: var(--main-color);
+  margin-right: 0.5rem;
+}
