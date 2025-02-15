@@ -339,7 +339,7 @@
 /* Start Banners */
 
 .banner {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .first-banner{
@@ -443,6 +443,12 @@
     position: relative;
     z-index: 100;
 }
+
+
+.slide_sale_mainpage {
+    margin-bottom: 50px;
+}
+
 /* ------------ */
 .slide .container .mySwiper{
     overflow: hidden;
@@ -1162,7 +1168,8 @@
     }
 
     .products-header .see-all-btn{
-        font-size: smaller;
+        /* font-size: 0.7rem; */
+        
     }
 
     .product-container .name_product {

@@ -62,18 +62,31 @@
 @media (max-width: 768px) {
     
     .top_page_title img{
-        width: 200px;
+        width: 140px;
     }
+
+    .all_products .top_page_title .container {
+      margin: 0;
+      padding: 0;
+    }
+
+
 }
 
 @media (max-width: 480px) {
     
     .top_page_title {
       padding-top: 0;
+      padding: 0;
+    }
+
+    .top_page_title .container {
+      margin: 0;
+      padding: 0;
     }
 
     .top_page_title img{
-        width: 140px;
+        width: 120px;
     }
 }
 
@@ -615,7 +628,3 @@ input[type="range"]::-moz-range-thumb {
 i[data-tooltip] {
     z-index: 99999;
 }
-
-
-
-

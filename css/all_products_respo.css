@@ -185,12 +185,18 @@
 }
 
 @media (max-width: 425px) {
+    .top_page_title .container{
+        padding-top: 0.5rem;
+    }
+}
+
+@media (max-width: 425px) {
     .all_products .listed_products {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 }
 
-@media (max-width: 370px) { /* Corrected the missing 'px' */
+@media (max-width: 370px) {
     .all_products .listed_products {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }

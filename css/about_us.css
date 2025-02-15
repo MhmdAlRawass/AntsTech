@@ -138,14 +138,38 @@
     margin-top: 130px;
     height: 50vh;
   }
+
+  .our-story .story-text {
+    text-align: center;
+  }
 }
 
 
 @media (max-width: 768px) {
+
+  .hero .hero-content h1{
+    font-size: 2rem;
+  }
+
+  .hero .hero-content p{
+    font-size: 1rem;
+  }
+
   
   .story-container {
     flex-direction: column;
   }
+
+  .our-story .story-text h2,
+  .our-mission h2{
+    font-size: 1.7rem;
+  }
+
+  .our-story .story-text p,
+  .our-mission p{
+    font-size: 0.8rem;
+  }
+
   .story-text, .story-image {
     flex: 1 1 100%;
     padding: 10px;

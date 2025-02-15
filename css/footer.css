@@ -21,6 +21,7 @@ footer .container {
 }
 
 /* Footer Logo */
+
 .footer-logo img {
     width: 100%;
     max-width: 300px;
@@ -197,11 +198,16 @@ footer .container {
 
     footer .footer-logo {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     footer .footer-logo img{
         width: 90%;
         max-width: 200px;
+        padding-left: 1.2rem;
     }
 
     .footer-links {
@@ -239,6 +245,10 @@ footer .container {
         text-align: start;
         padding-left: 1.2rem;
     }
+    .footer-newsletter p{
+        text-align: start;
+        padding-left: 1.2rem;
+    }
     
 
     .footer-newsletter form {
@@ -260,6 +270,14 @@ footer .container {
 }
 
 @media (max-width: 480px) {
+
+    .footer-logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
     .footer-logo img {
         max-width: 200px;
     }
