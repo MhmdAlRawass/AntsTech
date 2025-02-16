@@ -4,10 +4,12 @@ let icon = document.getElementById("icon");
 let list = document.getElementById("list");
 let input = document.getElementById("search-input");
 let listItems = document.querySelectorAll(".dropdown-list-item");
+let dropdownHeader = document.getElementById("dropdown-header")
 
 dropdownBtnText.onclick = function () {
   list.classList.toggle("show");
-  icon.style.rotate = "-180deg";
+  // icon.style.rotate = "180deg";
+  dropdownHeader.classList.toggle("active");
 };
 
 window.onclick = function (e) {
@@ -17,6 +19,7 @@ window.onclick = function (e) {
     e.target.id !== "span"
   ) {
     list.classList.remove("show");
+    dropdownHeader.classList.remove("active");
     icon.style.rotate = "0deg";
   }
 };

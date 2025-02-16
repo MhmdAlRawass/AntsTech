@@ -47,7 +47,7 @@
             <form action="" class="search">
 
                 <!-- Dropdown start --> <!-- This should be dynamic  -->
-                <div class="dropdown">
+                <div class="dropdown" id="dropdown-header">
                     <div id="drop-text" class="dropdown-text">
                         <span id="span">All</span>
                         <i id="icon" class="fa-solid fa-chevron-down"></i>
@@ -57,7 +57,9 @@
                         <li class="dropdown-list-item">Accessories</li>
                         <li class="dropdown-list-item">Apple Products</li>
                         <li class="dropdown-list-item">Laptops</li>
+                        <li class="dropdown-list-item">PCs</li>
                         <li class="dropdown-list-item">Printers</li>
+                        <li class="dropdown-list-item">Network</li>
                     </ul>
                 </div>
                 <!-- Dropdown ends -->
@@ -100,7 +102,7 @@
                 <ul id="responsivemenu">
                     
                     <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="all_products.html">All Product</a></li>
+                    <li><a href="all_products.html">Hot Deals</a></li>
                     <li><a href="about_us.html">About us</a></li>
                     <li><a href="contact_us.html">Contact</a></li>
 
@@ -123,7 +125,7 @@
                 <ul id="responsivemenu">
                     
                     <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="all_products.html">All Product</a></li>
+                    <li><a href="all_products.html">Hot Deals</a></li>
                     <li><a href="about_us.html">About us</a></li>
                     <li><a href="contact_us.html">Contact</a></li>
 
@@ -224,101 +226,26 @@
                 </div>
 
                 <div class="category-item">
-                    <a href="">Computers & Tech Devices</a>
+                    <a href="">Peripherals & Accessories</a>
                     <i class="fa-solid fa-caret-right"></i>
                     <div class="sub-category">
-                        <div class="sub-category-item">
-                            <a href="">Accessories</a>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <div class="nested-sub-category">
-                                <div class="nested-sub-category-child">
-                                    <a href="">Audio & Sound Devices</a>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <div class="nested-sub-menu">
-                                        <a href="">Microphones</a>
-                                        <a href="">Speakers</a>
-                                        <a href="">Webcams</a>
-                                    </div>
-                                </div>
-                                <!-- continue if needed -->
-                              </div>
-                        </div>
-                        
-                        <div class="sub-category-item">
-                            <a href="">Computer Components</a>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <div class="nested-sub-category">
-                                <div class="nested-sub-category-child">
-                                    <a href="">Audio & Sound Devices</a>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <div class="nested-sub-menu">
-                                        <a href="">Microphones</a>
-                                        <a href="">Speakers</a>
-                                        <a href="">Webcams</a>
-                                    </div>
-                                </div>
-                                <!-- continue if needed -->
-                              </div>
-                        </div>
-
-                        <div class="sub-category-item">
-                            <a href="">Gaming Consoles & Accessories</a>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <div class="nested-sub-category">
-                                <div class="nested-sub-category-child">
-                                    <a href="">Audio & Sound Devices</a>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <div class="nested-sub-menu">
-                                        <a href="">Microphones</a>
-                                        <a href="">Speakers</a>
-                                        <a href="">Webcams</a>
-                                    </div>
-                                </div>
-                                <!-- continue if needed -->
-                              </div>
-                        </div>
-
-                        <div class="sub-category-item">
-                            <a href="">Laptop Parts & Accessories</a>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <div class="nested-sub-category">
-                                <div class="nested-sub-category-child">
-                                    <a href="">Audio & Sound Devices</a>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <div class="nested-sub-menu">
-                                        <a href="">Microphones</a>
-                                        <a href="">Speakers</a>
-                                        <a href="">Webcams</a>
-                                    </div>
-                                </div>
-                                <!-- continue if needed -->
-                              </div>
-                        </div>
-
+                        <a href="">Monitors</a>
+                        <a href="">Keyboards & Mice</a>
+                        <a href="">Webcams & Headsets</a>
+                        <a href="">Docking Stations</a>
+                        <a href="">Laptop Bags & Sleeves</a>
+                        <a href="">Cables & Adapters</a>
 
                     </div>
                 </div>
 
                 <div class="category-item">
-                    <a href="">Apple Products</a>
-                    <i class="fa-solid fa-caret-right"></i>
-                    <div class="sub-category">
-                        <a href="">Airpods</a>
-                        <a href="">AirTag</a>
-                        <a href="">Apple Adapter</a>
-                        <a href="">Apple Keyboard</a>
-                        <a href="">Apple Mouse</a>
-                        <a href="">Apple Pencil</a>
-                        <a href="">Apple Tv</a>
-                        <a href="">Apple Watch</a>
-                        <a href="">iMAC</a>
-                        <a href="">iPADS</a>
-                        <a href="">IPhone Covers</a>
-                        <a href="">MAC Desktops</a>
-                        <a href="">MAC Laptops</a>
-                        <a href="">MAC Mini</a>
+                    <a href="">Computers & Tech Devices</a>
+                    
+                </div>
 
-                    </div>
+                <div class="category-item">
+                    <a href="">Apple Products</a>
                 </div>
 
                 <div class="category-item">
@@ -407,6 +334,74 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="category-item">
+                    <a href="">Printers & Scanners</a>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <div class="sub-category">
+                        <!-- sub category with also nested menu -->
+                        <div class="sub-category-item">
+                            <a href="">Types</a>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <div class="nested-sub-category">
+                                <a href="">Inkjet Printers</a>
+                                <a href="">Laser Printers</a>
+                                <a href="">All-in-One Printers (Print, Scan, Copy, Fax)</a>
+                                <a href="">Photo Printers</a>
+                                <a href="">Wide Format Printers</a>
+                                <a href="">Dot Matrix Printers</a>
+                                <a href="">Label Printers</a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="sub-category-item">
+                            <a href="">Supplies & Accessories</a>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <div class="nested-sub-category">
+                                <a href="">Ink Cartridges</a>
+                                <a href="">Toner Cartridges</a>
+                                <a href="">Photo Paper</a>
+                                <a href="">Printer Cables</a>
+                                <a href="">Maintenance Kits</a>
+
+                            </div>
+                        </div>
+
+                        <div class="sub-category-item">
+                            <a href="">Brands</a>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <div class="nested-sub-category">
+                                <a href="">HP</a>
+                                <a href="">Canon</a>
+                                <a href="">Epson</a>
+                                <a href="">Brother</a>
+                                <a href="">Samsung</a>
+                                <a href="">Xerox</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <a href="">Networking & Smart Home</a>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <div class="sub-category">
+                        <a href="">Wi-Fi Routers</a>
+                        <a href="">Modems</a>
+                        <a href="">Smart Home Devices</a>
+                        <a href="">Home Security Cameras</a>
+
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <a href="">Featured Offers</a>
+                </div>
+
+                
                 
                 <!-- <a href="#">All Categories</a>
                 <a href="#">Best Seller Products</a>
@@ -507,7 +502,7 @@
                 <a href="apple_products.html"><img src="img/logos/lenovo.svg" /></a>
                 <a href="apple_products.html"><img src="img/logos/dell.svg" /></a>
                 <a href="apple_products.html"><img src="img/logos/intel.png" /></a>
-                <a href="apple_products.html"><img src="img/logos/lenovo.svg" /></a>
+                <a href="apple_products.html"><img src="img/logos/brother.png" /></a>
                 <a href="apple_products.html"><img src="img/logos/amd.png" /></a>
             </div>
         </div>

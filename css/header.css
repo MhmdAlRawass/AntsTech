@@ -138,6 +138,10 @@ header .top-nav .search {
     flex-grow: 1;
 }
 
+.dropdown-text span{
+    padding-right: 0.5rem;
+}
+
 .dropdown-list {
     display: block;
     position: absolute;
@@ -165,6 +169,10 @@ header .top-nav .search {
     text-overflow: ellipsis;
 }
 
+.dropdown-list-item:last-child{
+    padding-bottom: 1rem;
+}
+
 .dropdown-list-item:hover {
     margin-left: 0.5rem;
     color: var(--main-color);
@@ -172,6 +180,11 @@ header .top-nav .search {
 
 #list.show {
     max-height: 300px;
+    overflow: auto;
+}
+
+#dropdown-header.active #icon {
+    transform: rotate(180deg);
 }
 
 .search-box {

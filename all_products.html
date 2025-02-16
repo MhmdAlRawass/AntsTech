@@ -42,7 +42,7 @@
             <form action="" class="search">
 
                 <!-- Dropdown start --> <!-- This should be dynamic  -->
-                <div class="dropdown">
+                <div class="dropdown" id="dropdown-header">
                     <div id="drop-text" class="dropdown-text">
                         <span id="span">All</span>
                         <i id="icon" class="fa-solid fa-chevron-down"></i>
@@ -52,7 +52,9 @@
                         <li class="dropdown-list-item">Accessories</li>
                         <li class="dropdown-list-item">Apple Products</li>
                         <li class="dropdown-list-item">Laptops</li>
+                        <li class="dropdown-list-item">PCs</li>
                         <li class="dropdown-list-item">Printers</li>
+                        <li class="dropdown-list-item">Network</li>
                     </ul>
                 </div>
                 <!-- Dropdown ends -->
@@ -95,7 +97,7 @@
                 <ul id="responsivemenu">
                     
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="all_products.html">All Product</a></li>
+                    <li class="active"><a href="all_products.html">Hot Deals</a></li>
                     <li><a href="about_us.html">About us</a></li>
                     <li><a href="contact_us.html">Contact</a></li>
 
@@ -118,7 +120,7 @@
                 <ul id="responsivemenu">
                     
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="all_products.html">All Product</a></li>
+                    <li class="active"><a href="all_products.html">Hot Deals</a></li>
                     <li><a href="about_us.html">About us</a></li>
                     <li><a href="contact_us.html">Contact</a></li>
 
@@ -1177,6 +1179,46 @@
     <script src="js/cart.js"></script>
     <script src="js/main_page.js"></script>
     <script src="js/all_products.js"></script>
+
+    <script>
+                
+        document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.icons i[data-tooltip]').forEach(icon => {
+            icon.addEventListener('mouseenter', showTooltip);
+            icon.addEventListener('mouseleave', hideTooltip);
+        });
+        });
+        function showTooltip(event) {
+        const tooltipText = event.target.getAttribute('data-tooltip');
+        if (!tooltipText) return;
+
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        tooltip.innerText = tooltipText;
+        document.body.appendChild(tooltip);
+
+        // increase z-index
+        tooltip.style.position = 'absolute';
+        tooltip.style.zIndex = '99999'; 
+
+        const { left, top, width } = event.target.getBoundingClientRect();
+        tooltip.style.left = `${left + window.scrollX + width / 2 - tooltip.offsetWidth / 2}px`;
+        tooltip.style.top = `${top + window.scrollY - tooltip.offsetHeight - 5}px`;
+
+        requestAnimationFrame(() => tooltip.classList.add('show'));
+        event.target._tooltipElement = tooltip;
+        }
+
+
+        function hideTooltip(event) {
+        const tooltip = event.target._tooltipElement;
+        if (tooltip) {
+            tooltip.classList.remove('show');
+            tooltip.addEventListener('transitionend', () => tooltip.remove(), { once: true });
+            event.target._tooltipElement = null;
+        }
+        }
+    </script>
 
 </body>
 
