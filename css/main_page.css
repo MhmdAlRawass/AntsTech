@@ -319,22 +319,14 @@
 /* Animation container */
 .logo-carousel .logos-slide {
     display: inline-flex;
-    /* animation: 35s slide infinite linear; */
-}
-
-img{
+    animation: 35s slide infinite linear;
 }
 
 
-/* @supports (-webkit-transform: rotate(270deg)) and (not (transform: rotate(270deg))) { */
 #amd-img {
         transform: rotate(0);
-        /* transform: rotate(270deg); */
-        /* width: 200px; */
     }
-/* } */
-/* } */
-
+    
 /* Individual logos */
 .logo-carousel .logos-slide img {
     width: var(--logo-size);
