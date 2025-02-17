@@ -62,16 +62,7 @@
     }
 }
 
-@media (max-width: 480px) {
-    
-    .top_page_title {
-      padding-top: 0;
-    }
 
-    .top_page_title img{
-        width: 140px;
-    }
-}
 
 .all_products .container {
     display: flex;
