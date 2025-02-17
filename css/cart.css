@@ -82,12 +82,15 @@ margin-bottom: 0;
 .cart .item_cart .delete_item i{
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3;
+    color: black;
+    transition: all 0.3s ease-in-out;
 }
 
 .cart .item_cart .delete_item i:hover{
 color: var(--dark-red);
 transform: scale(1.2);
+transition: all 0.3s ease-in-out;
+
 }
 
 .cart .item_cart img{
@@ -120,21 +123,28 @@ transform: scale(1.2);
     text-transform: uppercase;
     cursor: pointer;
    
-    transition: 0.3 ease;
+    transition: all 0.3s ease-in-out;
+
 }
 
 .cart .button_cart .btn_cart:hover{
     background: var(--main-color);
     color: #fff;
+    transition: all 0.3s ease-in-out;
+
 }
 
 .cart .button_cart .trans_bg{
     background: transparent;
     color: var(--dark-color);
+    transition: all 0.3s ease-in-out;
+
 }
 
 .cart .button_cart .trans_bg:hover{
     background: var(--main-color);
     color: #fff;
+    transition: all 0.3s ease-in-out;
+
 }
 
