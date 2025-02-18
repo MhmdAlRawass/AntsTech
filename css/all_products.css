@@ -508,6 +508,7 @@ input[type="range"]::-moz-range-thumb {
     width: 100%;
     flex-direction: none;
     transition: 0.3s ease;
+    z-index: 10;
 }
 
 .all_products .listed_products .product {
@@ -519,12 +520,9 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-.product:hover {
-    z-index: 99999;
-}
-
 .all_products .listed_products .product:hover {
     transform: scale(1.1);
+    z-index: 100;
     border: 1px solid var(--border-color);
 }
 
