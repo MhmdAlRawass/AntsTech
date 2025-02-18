@@ -172,7 +172,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100%;
         width: 280px;
         background: #fff;
         transform: translateX(-100%);
@@ -220,6 +220,51 @@
         right: 10px;
     }
 
+    /* shop by category header */
+    header .nav-respo .shop-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 12px 20px; */
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--dark-color);
+        cursor: pointer;
+        position: relative;
+    }
+
+    header .nav-respo .category-list {
+        display: block;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+    }
+    
+    header .nav-respo .header-dropdown-container.active .category-list {
+        max-height: 500px;
+    }
+
+    header .nav-respo .header-dropdown-container.active .shop-container i {
+        transform: rotate(180deg);
+    }
+    
+    
+
+    header .nav-respo .category-list li {
+        /* padding: 8px 20px; */
+        /* font-size: normal; */
+        /* font-weight: normal; */
+    }
+    header .nav-respo .category-list li:first-child {
+        /* padding-top: 0; */
+    }
+
+    header .nav-respo .category-list .active a{
+        color: var(--main-color);
+    }
+
+    /* End category list */
     header .nav-respo .links-respo ul li::after {
         content: '';
         position: absolute;
@@ -288,7 +333,9 @@
         position: relative;
     }
     
-    header .nav-respo ul li.active::before {
+    header .nav-respo ul li.active::before,
+    header .nav-respo .header-dropdown-container.active li::before
+    {
         content: '';
         position: absolute;
         left: -8px;
@@ -364,6 +411,20 @@
     .dropdown-text{
         padding: 0.6rem 1rem 0rem 1.3rem;
     }
+
+    header .nav-respo .shop-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 12px 20px; */
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--dark-color);
+        cursor: pointer;
+        position: relative;
+    }
+
 }
 
 @media (max-width: 540px) {

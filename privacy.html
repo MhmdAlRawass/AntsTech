@@ -116,9 +116,35 @@
                 <ul id="responsivemenu">
                     
                     <li><a href="index.html">Home</a></li>
+                    
+                    <div class="header-dropdown-container">
+                        <div class="shop-container">
+                            <li>
+                               <div class="text">Shop By Category</div>
+                            </li>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+
+                        <!-- Categories list -->
+                        <div class="category-list">
+                            <li class="active"><a href="">PCs & Laptops</a></li>
+                            <li><a href="">Peripherals & Accessories</a></li>
+                            <li><a href="">Computer & Tech Devices</a></li>
+                            <li><a href="">Apple Products</a></li>
+                            <li><a href="">Office & Business Solutions</a></li>
+                            <li><a href="">Surveillance & Security Systems</a></li>
+                            <li><a href="">Printers & Scanners</a></li>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
                     <li><a href="all_products.html">Hot Deals</a></li>
                     <li><a href="about_us.html">About us</a></li>
                     <li><a href="contact_us.html">Contact</a></li>
+
+                    
 
                 </ul>
 
@@ -232,8 +258,20 @@
     </div>
       <!-- End section -->
     
-      <!-- Footer -->
-      <footer>
+      <button id="whatsappBtn" onclick="openWhatsApp()">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+            </div>
+            <svg class="progress-ring" viewBox="0 0 36 36">
+                <path class="circle-bg" d="M18 2 a 16 16 0 0 1 0 32 a 16 16 0 0 1 0 -32"/>
+                <path class="circle" stroke-dasharray="0, 100" d="M18 2 a 16 16 0 0 1 0 32 a 16 16 0 0 1 0 -32"/>
+            </svg>
+        </div>
+    </button>
+
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <!-- Left Section: Logo -->
             <div class="footer-logo">
@@ -256,10 +294,12 @@
                 <div class="footer-column">
                     <h4>Categories</h4>
                     <div class="links">
-                        <a href="all_products.html">All Products</a>
                         <a href="#">Laptops</a>
-                        <a href="#">Computers and & Tech Devices</a>
+                        <a href="#">PCs</a>
                         <a href="#">Apple Products</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">Printers</a>
+                        <a href="#">Network</a>
                     </div>
                 </div>
             </div>

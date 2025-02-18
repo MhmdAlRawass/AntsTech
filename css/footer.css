@@ -298,3 +298,78 @@ footer .container {
         font-size: 14px;
     }
 }
+
+/* Floating WhatsApp Button Styles */
+#whatsappBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    z-index: 100;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+#whatsappBtn.show {
+    opacity: 1;
+}
+
+.outer-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-circle {
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.inner-circle:hover {
+    background: #1EBE5D;
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Progress Ring Styles */
+.progress-ring {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 3;
+}
+
+.circle {
+    fill: none;
+    stroke: #128C7E;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.3s ease;
+}

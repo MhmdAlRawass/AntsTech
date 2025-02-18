@@ -60,3 +60,19 @@ document.querySelector('.sidebar-overlay').addEventListener('click', () => {
   document.querySelector('.nav-respo').classList.remove('active');
   document.querySelector('.sidebar-overlay').classList.remove('active');
 });
+
+// Shop By category sidebar dropdown
+const shopContainer = document.querySelector('.shop-container');
+const dropdownContainer = document.querySelector('.header-dropdown-container');
+
+shopContainer.addEventListener('click', () => {
+    dropdownContainer.classList.toggle('active');
+});
+
+
+// Open WhatsApp chat when clicked
+function openWhatsApp() {
+    // Add your WhatsApp number with country code
+    const phoneNumber = "+96176393947"; 
+    window.open(`https://wa.me/${phoneNumber}`, "_blank");
+}
