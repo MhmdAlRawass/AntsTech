@@ -15,22 +15,35 @@
 }
 
 /*  */
+/* 4 */
+@media (max-width: 1550px) {
+    .all_products .listed_products {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+}
+/* 3 */
+@media (max-width: 1290px) {
+    .all_products .listed_products {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+
 
 @media (max-width: 1200px) {
-    .all_products .listed_products {
+    /* .all_products .listed_products {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+    } */
 }
 
 @media (max-width:1058px){
     .all_products .listed_products {
-        grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+        grid-template-columns: repeat(inherit, minmax(185px, 1fr));
     }
 }
 
 @media (max-width: 992px) {
     .all_products .listed_products {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
     }
 
     .all_products .container{
@@ -132,6 +145,13 @@
     /* End ------------------ */
 }
 
+@media (max-width: 960px) {
+    .all_products .listed_products {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+
+
 @media (max-width: 814px) {
     
     /* .all_products .listed_products {
@@ -180,7 +200,14 @@
 
 @media (max-width: 680px) {
     .all_products .listed_products {
-        grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+        grid-template-columns: repeat(inherit, minmax(185px, 1fr));
+    }
+}
+
+/* 2 */
+@media (max-width: 640px) {
+    .all_products .listed_products {
+        grid-template-columns: repeat(2, minmax(185px, 1fr));
     }
 }
 
@@ -192,9 +219,16 @@
 
 @media (max-width: 425px) {
     .all_products .listed_products {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(inherit, minmax(160px, 1fr));
     }
 }
+
+@media (max-width: 400px) {
+    /* .all_products .listed_products {
+        grid-template-columns: repeat(1, minmax(140px, 1fr));
+    } */
+}
+
 
 @media (max-width: 370px) {
     .all_products .listed_products {
@@ -212,3 +246,5 @@
         height: 200px;
     }
 }
+
+
